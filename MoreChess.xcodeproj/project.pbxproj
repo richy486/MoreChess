@@ -36,6 +36,7 @@
 		B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */; };
 		B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */; };
 		B9FAC91D2BAF0D15002A20F7 /* Pieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */; };
+		B9FAC91F2BAF0D6A002A20F7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC91E2BAF0D6A002A20F7 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutState.swift; sourceTree = "<group>"; };
 		B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pieces.swift; sourceTree = "<group>"; };
+		B9FAC91E2BAF0D6A002A20F7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				B94B61AF2B461D3200C998F3 /* Piece.swift */,
+				B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */,
+				B9FAC91E2BAF0D6A002A20F7 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,7 +241,6 @@
 			children = (
 				B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */,
 				B94B61B22B461DD200C998F3 /* GridCoordinate.swift */,
-				B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
 				B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */,
+				B9FAC91F2BAF0D6A002A20F7 /* Player.swift in Sources */,
 				B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

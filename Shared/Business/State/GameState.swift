@@ -10,6 +10,8 @@ import Foundation
 struct GameState {
   // This data structure is (row, column), most of the other code is (column, row) because that is (x, y).
   var board: [[Piece?]] = [[]]
+  
+  var currentTurn: Player = .one
 
   var rowCount: Int { return board.count }
   var columnCount: Int {
@@ -21,11 +23,11 @@ struct GameState {
   init() {
     // Init board
     let initialBoard: [[Piece?]] = [
-      [PieceGenerator.randomPiece(movingDown: true, horizontalSize: 5, verticalSize: 5), Pieces.🐴(true), PieceGenerator.randomPiece(movingDown: true, horizontalSize: 5, verticalSize: 5), Pieces.👉(true), Pieces.🏰(true)],
+      [PieceGenerator.randomPiece(forPlayer: .two, horizontalSize: 5, verticalSize: 5), Pieces.🐴(.two), PieceGenerator.randomPiece(forPlayer: .two, horizontalSize: 5, verticalSize: 5), Pieces.👉(.two), Pieces.🏰(.two)],
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
-      [Pieces.🐴(false), Pieces.🥷(false), Pieces.🤴(false), Pieces.👸(false), PieceGenerator.randomPiece(movingDown: false, horizontalSize: 5, verticalSize: 5)],
+      [Pieces.🐴(.one), Pieces.🥷(.one), Pieces.🤴(.one), Pieces.👸(.one), PieceGenerator.randomPiece(forPlayer: .one, horizontalSize: 5, verticalSize: 5)],
     ]
 
     let allBoard = initialBoard.joined().compactMap { $0 }

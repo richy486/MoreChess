@@ -12,6 +12,9 @@ struct ContentView: View {
   
   var body: some View {
     VStack {
+      
+      Text("Current turn: \(appState.gameState.currentTurn.name)")
+      
       Spacer()
       
       BoardView(positioningInteractor: PositioningInteractor(appState: appState))

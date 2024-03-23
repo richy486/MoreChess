@@ -17,5 +17,5 @@ struct PieceView: View {
 }
 
 #Preview {
-  PieceView(piece: Pieces.🐴(false))
+  PieceView(piece: Pieces.🐴(.one))
 }

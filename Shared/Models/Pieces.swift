@@ -9,8 +9,8 @@ import Foundation
 
 enum Pieces {
   // Knight
-  static func 🐴(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "🐴", movingDown: movingDown, validMoves: [
+  static func 🐴(_ player: Player) -> Piece {
+    return Piece(icon: "🐴", player: player, validMoves: [
       // down
       GridCoordinate(column: 1, row: 2),
       GridCoordinate(column: -1, row: 2),
@@ -28,8 +28,8 @@ enum Pieces {
     ])
   }
   // King
-  static func 🤴(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "🤴", movingDown: movingDown, validMoves: [
+  static func 🤴(_ player: Player) -> Piece {
+    return Piece(icon: "🤴", player: player, validMoves: [
       GridCoordinate(column: 0, row: 1),
       GridCoordinate(column: 0, row: -1),
       GridCoordinate(column: 1, row: 0),
@@ -42,8 +42,8 @@ enum Pieces {
     ])
   }
   // Queen
-  static func 👸(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "👸", movingDown: movingDown, validMoves: [
+  static func 👸(_ player: Player) -> Piece {
+    return Piece(icon: "👸", player: player, validMoves: [
       GridCoordinate(column: 0, row: Int.max),
       GridCoordinate(column: 0, row: -Int.max),
       GridCoordinate(column: Int.max, row: 0),
@@ -56,8 +56,8 @@ enum Pieces {
     ])
   }
   // Rook
-  static func 🏰(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "🏰", movingDown: movingDown, validMoves: [
+  static func 🏰(_ player: Player) -> Piece {
+    return Piece(icon: "🏰", player: player, validMoves: [
       GridCoordinate(column: 0, row: Int.max),
       GridCoordinate(column: 0, row: -Int.max),
       GridCoordinate(column: Int.max, row: 0),
@@ -65,25 +65,25 @@ enum Pieces {
     ])
   }
   // Bishop
-  static func 🥷(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "🥷", movingDown: movingDown, validMoves: [
+  static func 🥷(_ player: Player) -> Piece {
+    return Piece(icon: "🥷", player: player, validMoves: [
       GridCoordinate(column: Int.max, row: Int.max),
       GridCoordinate(column: -Int.max, row: -Int.max),
       GridCoordinate(column: Int.max, row: -Int.max),
       GridCoordinate(column: -Int.max, row: Int.max),
     ])
   }
-  static func 📍(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "📍", movingDown: movingDown, validMoves: [
+  static func 📍(_ player: Player) -> Piece {
+    return Piece(icon: "📍", player: player, validMoves: [
       GridCoordinate(column: 1, row: 1),
       GridCoordinate(column: -1, row: 1)
     ])
   }
-  static func 👉(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "👉", movingDown: movingDown, validMoves: [GridCoordinate(column: 1, row: 1)])
+  static func 👉(_ player: Player) -> Piece {
+    return Piece(icon: "👉", player: player, validMoves: [GridCoordinate(column: 1, row: 1)])
   }
-  static func 🍴(_ movingDown: Bool) -> Piece {
-    return Piece(icon: "🍴", movingDown: movingDown, validMoves: [
+  static func 🍴(_ player: Player) -> Piece {
+    return Piece(icon: "🍴", player: player, validMoves: [
       GridCoordinate(column: 1, row: Int.max),
       GridCoordinate(column: -1, row: Int.max),
       GridCoordinate(column: 1, row: -Int.max),
