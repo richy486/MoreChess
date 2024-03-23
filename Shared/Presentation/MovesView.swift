@@ -17,9 +17,9 @@ struct MovesView: View {
 
 #Preview {
   MovesView(pieceList: [
-    Pieces.🐴(.one),
-    Pieces.🥷(.one),
-    Pieces.🤴(.one),
-    Pieces.👸(.one),
+//    Pieces.🐴(.one),
+//    Pieces.🥷(.one),
+//    Pieces.🤴(.one),
+//    Pieces.👸(.one),
   ])
 }

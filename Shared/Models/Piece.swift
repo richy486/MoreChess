@@ -9,7 +9,6 @@ import Foundation
 
 struct Piece {
   let icon: String
-//  let movingDown: Bool
   let player: Player
   let validMoves: [GridCoordinate]
   

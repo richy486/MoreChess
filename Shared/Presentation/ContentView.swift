@@ -14,6 +14,7 @@ struct ContentView: View {
     VStack {
       
       Text("Current turn: \(appState.gameState.currentTurn.name)")
+      Text("Playing state: \(appState.gameState.currentTurn.local ? "📱" : "⏱️")")
       
       Spacer()
       
