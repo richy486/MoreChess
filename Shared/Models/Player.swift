@@ -23,9 +23,9 @@ enum Player {
   var name: String {
     switch self {
     case .one:
-      "One"
+      "One 🔵"
     case .two:
-      "Two"
+      "Two 🟡"
     }
   }
   
@@ -35,6 +35,15 @@ enum Player {
       Color(hue: 0.55, saturation: 0.75, brightness: 1)
     case .two:
       Color(hue: 0.15, saturation: 0.75, brightness: 1)
+    }
+  }
+  
+  var opponent: Player {
+    switch self {
+    case .one:
+      return .two
+    case .two:
+      return .one
     }
   }
 }

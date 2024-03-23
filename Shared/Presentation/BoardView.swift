@@ -20,17 +20,17 @@ struct BoardView: View {
     Grid(horizontalSpacing: 0, verticalSpacing: 0) {
       ForEach(Array(appState.gameState.board.enumerated()), id: \.offset) { rowIndex, row in
         GridRow {
-          ForEach(Array(row.enumerated()), id:\.offset) { columnIndex, item in
+          ForEach(Array(row.enumerated()), id:\.offset) { columnIndex, piece in
             let isTarget = appState.positioningState.targetGrid?.column == columnIndex
               && appState.positioningState.targetGrid?.row == rowIndex
             let gridPosition = GridCoordinate(column: columnIndex, row: rowIndex)
             Group {
-              if let item {
+              if let piece {
                 let offset = appState.positioningState.pieceOffset(gridPosition)
-                PieceView(piece: item)
+                PieceView(piece: piece)
                   .frame(width: appState.layoutState.elementDiameter, 
                          height: appState.layoutState.elementDiameter)
-                  .background(isTarget ? Constants.targetColor : item.player.color)
+                  .background(isTarget ? Constants.targetColor : piece.player.color)
                   .offset(x: offset.width, y: offset.height)
                   .gesture(
                     DragGesture()

@@ -14,6 +14,15 @@ struct PositioningInteractor {
   
   func update(dragOffset: CGSize, from fromGridPosition: GridCoordinate) {
     
+    // Is there a piece at this grid position?
+    guard let piece = appState.gameState.board[fromGridPosition.row][fromGridPosition.column] else {
+      return
+    }
+    // Is this the right player's piece?
+    guard piece.player == appState.gameState.currentTurn else {
+      return
+    }
+    
     appState.positioningState.dragOffset = dragOffset
     
     // Set the starting position
@@ -30,19 +39,18 @@ struct PositioningInteractor {
   func endDrag() {
     // Must have a starting position to end the move
     guard let selectedGridPosition = appState.positioningState.selectedGridPosition else {
-      fatalError("Selected and target grid position must not be nil when drag ending")
+      return // Do nothing
     }
     
-    // Move the piece if there is a valid target.
+    // Move the piece if there is a valid target and swap turn.
     if let targetGrid = appState.positioningState.targetGrid {
-      // Target grid is only required for a valid move.
       movePiece(from: selectedGridPosition, to: targetGrid)
+      appState.gameState.currentTurn = appState.gameState.currentTurn.opponent
     }
+    
+    // Reset positioning values.
     appState.positioningState.selectedGridPosition = nil
     appState.positioningState.targetGrid = nil
-    
-    // TODO: Swap turn
-    
   }
   
   // MARK: Private functions
@@ -67,6 +75,7 @@ struct PositioningInteractor {
     }
     
     // Validate position
+    // TODO: Maybe replace this with a filter so we can use a guard.
     for validMove in piece.validMoves {
       // Check for not `moveDown`.
       let validMoveRow = piece.player.movingDown ? validMove.row : validMove.row * -1
@@ -80,6 +89,10 @@ struct PositioningInteractor {
       
       if (gridOffset.column == validMoveColumn || (gridOffset.column > 0 && validMoveColumn == Int.max) || (gridOffset.column < 0 && validMoveColumn == -Int.max))
           && (gridOffset.row == validMoveRow || (gridOffset.row > 0 && validMoveRow == Int.max) || (gridOffset.row < 0 && validMoveRow == -Int.max) ) {
+        
+        // TODO: Is target empty space or opponent's space?
+        
+        // Found a valid target
         return targetPosition
       }
     }
