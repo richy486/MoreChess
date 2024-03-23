@@ -1,0 +1,25 @@
+//
+//  MoviesView.swift
+//  MoreChess
+//
+//  Created by Richard Adem on 3/16/24.
+//
+
+import SwiftUI
+
+struct MovesView: View {
+  let pieceList: [Piece]
+  
+  var body: some View {
+    Text("TODO: Add moves list")
+  } // body
+}
+
+#Preview {
+  MovesView(pieceList: [
+    Pieces.🐴(false),
+    Pieces.🥷(false),
+    Pieces.🤴(false),
+    Pieces.👸(false),
+  ])
+}

@@ -1,5 +1,5 @@
 //
-//  GridPosition.swift
+//  GridCoordinate.swift
 //  MoreChess
 //
 //  Created by Richard Adem on 1/4/24.
@@ -7,9 +7,7 @@
 
 import Foundation
 
-//typealias GridPosition = (column: Int, row: Int)
-
-struct GridPosition: Hashable {
+struct GridCoordinate: Hashable {
   let column: Int
   let row: Int
   

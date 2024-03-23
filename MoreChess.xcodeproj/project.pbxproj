@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B90F55A92BA61F6E00874F00 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55A82BA61F6E00874F00 /* MoviesView.swift */; };
-		B90F55AA2BA61F6E00874F00 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55A82BA61F6E00874F00 /* MoviesView.swift */; };
+		B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55A82BA61F6E00874F00 /* MovesView.swift */; };
+		B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55A82BA61F6E00874F00 /* MovesView.swift */; };
 		B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55AB2BA6289800874F00 /* PieceView.swift */; };
 		B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55AB2BA6289800874F00 /* PieceView.swift */; };
 		B94B61B02B461D3200C998F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* Piece.swift */; };
 		B94B61B12B461D3200C998F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* Piece.swift */; };
-		B94B61B32B461DD200C998F3 /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridPosition.swift */; };
-		B94B61B42B461DD200C998F3 /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridPosition.swift */; };
-		B94B61B62B55476400C998F3 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B52B55476400C998F3 /* GameViewModel.swift */; };
-		B94B61B72B55476400C998F3 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B52B55476400C998F3 /* GameViewModel.swift */; };
+		B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridCoordinate.swift */; };
+		B94B61B42B461DD200C998F3 /* GridCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridCoordinate.swift */; };
 		B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */; };
 		B94B61F62B68F8D700C998F3 /* PieceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */; };
 		B95CE5282AD4CB5E00978591 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95CE5272AD4CB5E00978591 /* Tests_iOS.swift */; };
@@ -29,6 +27,13 @@
 		B95CE53A2AD4CB5E00978591 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95CE5102AD4CB5B00978591 /* ContentView.swift */; };
 		B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95CE5112AD4CB5E00978591 /* Assets.xcassets */; };
 		B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95CE5112AD4CB5E00978591 /* Assets.xcassets */; };
+		B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A62BAEF11E00907C61 /* AppState.swift */; };
+		B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A82BAEF18A00907C61 /* GameState.swift */; };
+		B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */; };
+		B9FAC9112BAEF492002A20F7 /* PositioningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9102BAEF492002A20F7 /* PositioningState.swift */; };
+		B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */; };
+		B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */; };
+		B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B90F55A82BA61F6E00874F00 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		B90F55A82BA61F6E00874F00 /* MovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesView.swift; sourceTree = "<group>"; };
 		B90F55AB2BA6289800874F00 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
 		B94B61AF2B461D3200C998F3 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
-		B94B61B22B461DD200C998F3 /* GridPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPosition.swift; sourceTree = "<group>"; };
-		B94B61B52B55476400C998F3 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		B94B61B22B461DD200C998F3 /* GridCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCoordinate.swift; sourceTree = "<group>"; };
 		B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceGenerator.swift; sourceTree = "<group>"; };
 		B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreChessApp.swift; sourceTree = "<group>"; };
 		B95CE5102AD4CB5B00978591 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,13 @@
 		B95CE52F2AD4CB5E00978591 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95CE5332AD4CB5E00978591 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		B95CE5352AD4CB5E00978591 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		B9ABF7A62BAEF11E00907C61 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B9ABF7A82BAEF18A00907C61 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		B9FAC9102BAEF492002A20F7 /* PositioningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositioningState.swift; sourceTree = "<group>"; };
+		B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositioningInteractor.swift; sourceTree = "<group>"; };
+		B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutState.swift; sourceTree = "<group>"; };
+		B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,15 +126,15 @@
 		B95CE50E2AD4CB5B00978591 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B9ABF7A22BAEF03500907C61 /* Presentation */,
+				B9ABF7A32BAEF03E00907C61 /* Business */,
+				B9ABF7A42BAEF04C00907C61 /* DataAccess */,
+				B9ABF7A52BAEF0C500907C61 /* Models */,
 				B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */,
-				B95CE5102AD4CB5B00978591 /* ContentView.swift */,
-				B94B61AF2B461D3200C998F3 /* Piece.swift */,
-				B94B61B22B461DD200C998F3 /* GridPosition.swift */,
-				B94B61B52B55476400C998F3 /* GameViewModel.swift */,
+				B94B61B22B461DD200C998F3 /* GridCoordinate.swift */,
 				B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */,
-				B90F55A82BA61F6E00874F00 /* MoviesView.swift */,
 				B95CE5112AD4CB5E00978591 /* Assets.xcassets */,
-				B90F55AB2BA6289800874F00 /* PieceView.swift */,
+				B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -163,6 +174,60 @@
 				B95CE5352AD4CB5E00978591 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		B9ABF7A22BAEF03500907C61 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B95CE5102AD4CB5B00978591 /* ContentView.swift */,
+				B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */,
+				B90F55AB2BA6289800874F00 /* PieceView.swift */,
+				B90F55A82BA61F6E00874F00 /* MovesView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B9ABF7A32BAEF03E00907C61 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC9122BAEF69F002A20F7 /* Interactors */,
+				B9FAC9132BAEF6A5002A20F7 /* State */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		B9ABF7A42BAEF04C00907C61 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		B9ABF7A52BAEF0C500907C61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B94B61AF2B461D3200C998F3 /* Piece.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9FAC9122BAEF69F002A20F7 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B9FAC9132BAEF6A5002A20F7 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B9ABF7A62BAEF11E00907C61 /* AppState.swift */,
+				B9ABF7A82BAEF18A00907C61 /* GameState.swift */,
+				B9FAC9102BAEF492002A20F7 /* PositioningState.swift */,
+				B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */,
 				B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,14 +389,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94B61B32B461DD200C998F3 /* GridPosition.swift in Sources */,
+				B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */,
+				B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */,
+				B9FAC9112BAEF492002A20F7 /* PositioningState.swift in Sources */,
+				B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B95CE5392AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B95CE5372AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
+				B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */,
 				B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */,
 				B94B61B02B461D3200C998F3 /* Piece.swift in Sources */,
-				B90F55A92BA61F6E00874F00 /* MoviesView.swift in Sources */,
+				B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */,
+				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
-				B94B61B62B55476400C998F3 /* GameViewModel.swift in Sources */,
+				B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,14 +409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94B61B42B461DD200C998F3 /* GridPosition.swift in Sources */,
+				B94B61B42B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B95CE53A2AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B95CE5382AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
 				B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */,
 				B94B61B12B461D3200C998F3 /* Piece.swift in Sources */,
-				B90F55AA2BA61F6E00874F00 /* MoviesView.swift in Sources */,
+				B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B94B61F62B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
-				B94B61B72B55476400C998F3 /* GameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +577,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -537,6 +608,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

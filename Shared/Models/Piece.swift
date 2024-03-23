@@ -8,14 +8,9 @@
 import Foundation
 
 struct Piece {
-//  static func == (lhs: Piece, rhs: Piece) -> Bool {
-//    return lhs.icon == rhs.icon
-////    && lhs.validMoves == rhs.validMoves
-//  }
-  
   let icon: String
   let movingDown: Bool
-  let validMoves: [GridPosition]
+  let validMoves: [GridCoordinate]
   
   // This blows up the system
   func drawMoves() -> String {
