@@ -1,43 +1,11 @@
 //
-//  PieceGenerator.swift
-//  MoreChess
+//  Pieces.swift
+//  MoreChess (iOS)
 //
-//  Created by Richard Adem on 1/30/24.
+//  Created by Richard Adem on 3/23/24.
 //
 
 import Foundation
-
-struct PieceGenerator {
-  static func randomPiece(movingDown: Bool, horizontalSize: Int, verticalSize: Int) -> Piece {
-    let validMoves: [GridCoordinate] = [
-      GridCoordinate(column: 0, row: Int.random(in: 1...3)),
-    ]
-    return Piece(icon: String(UnicodeScalar(Array(0x1F300...0x1F3F0).randomElement()!)!),
-                 movingDown: movingDown,
-                 validMoves: validMoves)
-  }
-  
-  private static func move() -> GridCoordinate {
-    // Has to move horizontally or vertically or both
-    // any direction?
-    // set distance or unlimited
-    enum Directions: CaseIterable {
-      case horizontal
-      case vertical
-      case both
-    }
-    let directions = Directions.allCases.randomElement()!
-    switch directions {
-    case .horizontal:
-      return GridCoordinate(column: Bool.random() ? Int.random(in: 1...3) : Int.max, row: 0)
-    case .vertical:
-      return GridCoordinate(column: 0, row: Bool.random() ? Int.random(in: 1...3) : Int.max)
-    case .both:
-      return GridCoordinate(column: Bool.random() ? Int.random(in: 1...3) : Int.max,
-                          row: Bool.random() ? Int.random(in: 1...3) : Int.max)
-    }
-  }
-}
 
 enum Pieces {
   // Knight

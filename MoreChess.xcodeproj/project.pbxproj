@@ -34,6 +34,8 @@
 		B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */; };
 		B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */; };
 		B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */; };
+		B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */; };
+		B9FAC91D2BAF0D15002A20F7 /* Pieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositioningInteractor.swift; sourceTree = "<group>"; };
 		B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutState.swift; sourceTree = "<group>"; };
 		B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pieces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +133,8 @@
 				B9ABF7A32BAEF03E00907C61 /* Business */,
 				B9ABF7A42BAEF04C00907C61 /* DataAccess */,
 				B9ABF7A52BAEF0C500907C61 /* Models */,
+				B9FAC91C2BAF0CDE002A20F7 /* Utils */,
 				B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */,
-				B94B61B22B461DD200C998F3 /* GridCoordinate.swift */,
-				B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */,
 				B95CE5112AD4CB5E00978591 /* Assets.xcassets */,
 				B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */,
 			);
@@ -228,6 +230,16 @@
 				B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		B9FAC91C2BAF0CDE002A20F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */,
+				B94B61B22B461DD200C998F3 /* GridCoordinate.swift */,
+				B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +413,7 @@
 				B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
+				B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */,
 				B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC91D2BAF0D15002A20F7 /* Pieces.swift in Sources */,
 				B94B61B42B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B95CE53A2AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B95CE5382AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
