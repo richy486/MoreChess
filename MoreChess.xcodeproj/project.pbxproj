@@ -83,6 +83,7 @@
 		B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pieces.swift; sourceTree = "<group>"; };
 		B9FAC91E2BAF0D6A002A20F7 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		B9FAC9202BAF14CB002A20F7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 				B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */,
 				B95CE5112AD4CB5E00978591 /* Assets.xcassets */,
 				B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */,
+				B9FAC9202BAF14CB002A20F7 /* README.md */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
