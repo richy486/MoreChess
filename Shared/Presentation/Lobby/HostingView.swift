@@ -11,6 +11,8 @@ struct HostingView: View {
   @Environment(\.dismiss) var dismiss
   let gameService: GameService
   
+  let lobbyInteractor: LobbyInteractor
+  
   var body: some View {
     VStack {
       Text("Hosting")
@@ -18,14 +20,22 @@ struct HostingView: View {
       
       Spacer().frame(height: 20)
       
-      Text("⏱️ Waiting for other player to join")
+      HStack {
+        WaitingView()
+        Text("Waiting for other player to join")
+      }
     }
     .navigationTitle("Host")    
     .navigationBarTitleDisplayMode(.inline)
     .simpleNavigationBackButton(dismiss: dismiss)
+    .onAppear {
+      lobbyInteractor.checkForOpponentClient(gameService: gameService)
+    }
   }
 }
 
 #Preview {
-  HostingView(gameService: GameService(gameId: "a", hostId: "v", clientId: "g"))
+  let appState = AppState()
+  return HostingView(gameService: GameService(gameId: "a", hostId: "v", clientId: "g"), 
+                     lobbyInteractor: LobbyInteractor(appState: appState))
 }

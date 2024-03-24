@@ -35,4 +35,23 @@ class LobbyInteractor {
       appState.lobbyState.availableGames = await lobbyRepository.availableGames()
     }
   }
+  
+  func checkForOpponentClient(gameService: GameService) {
+    LobbyRepository.checks = 0
+    Task {
+      var resultFound = false
+      while resultFound == false {
+        resultFound = await lobbyRepository.opponentJoined(gameId: gameService.gameId)
+      }
+      
+      appState.lobbyState.currentGameService = gameService
+    }
+  }
+  
+  func joinGame(gameService: GameService) {
+    Task {
+      await lobbyRepository.joinGame(gameService: gameService)
+      appState.lobbyState.currentGameService = gameService
+    }
+  }
 }

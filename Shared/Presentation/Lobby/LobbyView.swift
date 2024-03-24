@@ -20,7 +20,7 @@ struct LobbyView: View {
         .navigationDestination(for: LobbyState.LobbyPages.self) { destination in
           switch destination {
           case .host(let gameService):
-            HostingView(gameService: gameService)
+            HostingView(gameService: gameService, lobbyInteractor: lobbyInteractor)
           case .client:
             ClientView(lobbyInteractor: lobbyInteractor)
           }

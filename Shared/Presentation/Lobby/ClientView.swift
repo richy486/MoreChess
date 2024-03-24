@@ -17,7 +17,9 @@ struct ClientView: View {
     VStack {
       Text("Client")
       ForEach(appState.lobbyState.availableGames, id: \.self) { gameService in
-        Text("Game: \(gameService.gameId)")
+        Button("Game: \(gameService.gameId)") {
+          lobbyInteractor.joinGame(gameService: gameService)
+        }
       }
     }
     .navigationTitle("Join")

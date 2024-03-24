@@ -12,12 +12,12 @@ struct ContentView: View {
   
   var body: some View {
     Group {
-//      if appState.lobbyState.inGame == false {
-//        LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
-//        
-//      } else {
+      if appState.lobbyState.inGame == false {
+        LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
+        
+      } else {
         GameView()
-//      }
+      }
       
     }
     .environment(appState)

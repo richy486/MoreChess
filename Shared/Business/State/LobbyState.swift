@@ -15,11 +15,10 @@ struct LobbyState {
   }
   var path: [LobbyPages] = []
   
-  
-  var serviceType: ServiceType? = nil
   var availableGames: [GameService] = []
+  var currentGameService: GameService? = nil
   
   var inGame: Bool {
-    return serviceType != nil
+    return currentGameService != nil
   }
 }

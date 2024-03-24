@@ -53,6 +53,7 @@
 		B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9442BB06BD4002A20F7 /* HostingView.swift */; };
 		B9FAC9472BB06C0C002A20F7 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9462BB06C0C002A20F7 /* ClientView.swift */; };
 		B9FAC9492BB06C91002A20F7 /* SimpleNavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */; };
+		B9FAC94B2BB06FB2002A20F7 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		B9FAC9442BB06BD4002A20F7 /* HostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingView.swift; sourceTree = "<group>"; };
 		B9FAC9462BB06C0C002A20F7 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationBackButton.swift; sourceTree = "<group>"; };
+		B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			children = (
 				B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */,
 				B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */,
+				B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				B9FAC9222BAF1DCD002A20F7 /* GameRepository.swift in Sources */,
 				B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,
+				B9FAC94B2BB06FB2002A20F7 /* WaitingView.swift in Sources */,
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
 				B9FAC9432BB06315002A20F7 /* LobbyRepository.swift in Sources */,
 				B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */,

@@ -44,7 +44,14 @@ struct GameView: View {
     case .playing:
       VStack {
         Text("Current turn: \(appState.gameState.currentTurn.name)")
-        Text("Playing state: \(appState.gameState.currentTurn.local ? "📱" : "⏱️")")
+        HStack {
+          Text("Playing state: ")
+          if appState.gameState.currentTurn.local {
+            Text("📱")
+          } else {
+            WaitingView()
+          }
+        }
       }
     case .win(let player):
       Text("Player \(player.name) Won!")
@@ -55,5 +62,7 @@ struct GameView: View {
 }
 
 #Preview {
-  GameView()
+  let appState = AppState()
+  return GameView()
+    .environment(appState)
 }
