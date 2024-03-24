@@ -14,6 +14,15 @@ struct BoardView: View {
   
   private enum Constants {
     static let targetColor = Color.red
+    static let oddBoardColor = Color.gray
+    static let evenBoardColor = Color.white
+    static let boardOutline = Color.gray
+  }
+  
+  private enum ZIndex: Int {
+    case normal = 0
+    case target = 1
+    case selected = 2
   }
   
   var body: some View {
@@ -24,6 +33,8 @@ struct BoardView: View {
             let isTarget = appState.positioningState.targetGrid?.column == columnIndex
               && appState.positioningState.targetGrid?.row == rowIndex
             let gridPosition = GridCoordinate(column: columnIndex, row: rowIndex)
+            let isSelected = appState.positioningState.selectedGridPosition?.column == columnIndex
+              && appState.positioningState.selectedGridPosition?.row == rowIndex
             Group {
               if let piece {
                 let offset = appState.positioningState.pieceOffset(gridPosition)
@@ -43,24 +54,38 @@ struct BoardView: View {
                         positioningInteractor.endDrag()
                       }
                   )
+                  .zIndex(Double(isSelected ? ZIndex.selected.rawValue : ZIndex.normal.rawValue))
               } else {
                 Color.clear
                   .frame(width: appState.layoutState.elementDiameter,
                          height: appState.layoutState.elementDiameter)
               }
             } // Group
-            .background(
-              Rectangle()
-                .stroke(isTarget ? .red : .green,
-                        lineWidth: 1)
-            )
-            // TODO: this puts the dragged icon behind other icons sometimes.
-            .zIndex(isTarget ? 0 : -1)
+            .background(background(isTarget: isTarget, 
+                                   rowIndex: rowIndex,
+                                   columnIndex: columnIndex,
+                                   rowCount: appState.gameState.rowCount))
           }
         }
       }
     } // Grid
+    .border(Constants.boardOutline, width: 1)
   } // body
+  
+  func background(isTarget: Bool, rowIndex: Int, columnIndex: Int, rowCount: Int) -> some View {
+    let index = rowIndex * rowCount + columnIndex
+    let color: Color = switch (isTarget, (index % 2 == 0)) {
+    case (true, _):
+      Constants.targetColor
+    default:
+      .clear
+    }
+    return ZStack {
+      Rectangle().fill((index % 2 == 0) ? Constants.oddBoardColor : Constants.evenBoardColor)
+      Rectangle().strokeBorder(color, lineWidth: 2)
+    }
+    .zIndex(Double(isTarget ? ZIndex.target.rawValue : ZIndex.normal.rawValue))
+  }
 }
 
 #Preview {
