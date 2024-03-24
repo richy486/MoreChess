@@ -41,7 +41,6 @@ struct GameState {
       }
       currentTurnIndex = index
     }
-    
   }
   var currentOpponent: Player {
     switch currentTurnIndex {
@@ -54,8 +53,11 @@ struct GameState {
     }
   }
   
+  var playCondition: PlayCondition
+  
   init() {
     currentTurnIndex = 0
+    playCondition = .playing
     
     // Init board
     let initialBoard: Board = [

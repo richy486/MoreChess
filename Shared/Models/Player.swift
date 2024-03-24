@@ -7,7 +7,7 @@
 
 import SwiftUI // For `Color`.
 
-struct Player: Equatable {
+struct Player: Equatable, Hashable {
   let name: String
   let color: Color
   let movingDown: Bool

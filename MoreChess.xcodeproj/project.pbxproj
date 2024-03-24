@@ -41,6 +41,7 @@
 		B9FAC9242BAF1E9F002A20F7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9232BAF1E9F002A20F7 /* Board.swift */; };
 		B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9292BAF29DF002A20F7 /* Players.swift */; };
 		B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */; };
+		B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		B9FAC9232BAF1E9F002A20F7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		B9FAC9292BAF29DF002A20F7 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveValidator.swift; sourceTree = "<group>"; };
+		B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCondition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				B9FAC91E2BAF0D6A002A20F7 /* Player.swift */,
 				B9FAC9292BAF29DF002A20F7 /* Players.swift */,
 				B9FAC9232BAF1E9F002A20F7 /* Board.swift */,
+				B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */,
 				B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */,
 				B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */,
+				B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */,
 				B9FAC9112BAEF492002A20F7 /* PositioningState.swift in Sources */,
 				B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B9FAC9242BAF1E9F002A20F7 /* Board.swift in Sources */,

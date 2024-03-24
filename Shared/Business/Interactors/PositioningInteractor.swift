@@ -15,6 +15,11 @@ struct PositioningInteractor {
   
   func update(dragOffset: CGSize, from fromGridPosition: GridCoordinate) {
     
+    // Is the game playing
+    guard appState.gameState.playCondition == .playing else {
+      return
+    }
+    
     // Is the current player local?
     guard appState.gameState.currentTurn.local else {
       return
@@ -56,11 +61,12 @@ struct PositioningInteractor {
     if let targetGrid = appState.positioningState.targetGrid {
       movePiece(from: selectedGridPosition, to: targetGrid)
       appState.gameState.currentTurn = appState.gameState.currentOpponent
-      // TODO: Check for win state
-      
+      // Check for win state
+      checkWinState()
+            
       // Fetch the next board
       // TODO: Make this work for two non-local players.
-      if appState.gameState.currentTurn.local == false {
+      if appState.gameState.playCondition == .playing && appState.gameState.currentTurn.local == false {
         Task {
           appState.gameState.board = await gameRepository
             .fetchBoard(currentPlayer: appState.gameState.currentTurn,
@@ -70,7 +76,8 @@ struct PositioningInteractor {
                         rowCount: appState.gameState.rowCount)
           // Switch back
           appState.gameState.currentTurn = appState.gameState.currentOpponent
-          // TODO: Check for win state
+          // Check for win state
+          checkWinState()
         }
       }
     }
@@ -92,5 +99,24 @@ struct PositioningInteractor {
     let piece = appState.gameState.board[from.row][from.column]
     appState.gameState.board[to.row][to.column] = piece
     appState.gameState.board[from.row][from.column] = nil
+  }
+  
+  private func checkWinState() {
+    let pieces = appState.gameState.board.flatMap { $0 }.compactMap { $0 }
+    
+//    let playerPieceCounts = pieces.reduce(into: [Player: Int]()) { result, piece in
+//      result[piece.player] = (result[piece.player] ?? 0) + 1
+//    }
+    
+    let uniquePlayers = Set(pieces.map { $0.player })
+    
+    switch uniquePlayers.count {
+    case 0:
+      appState.gameState.playCondition = .tie
+    case 1:
+      appState.gameState.playCondition = .win(player: uniquePlayers.first!)
+    default:
+      break
+    }
   }
 }

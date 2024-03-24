@@ -13,8 +13,7 @@ struct ContentView: View {
   var body: some View {
     VStack {
       
-      Text("Current turn: \(appState.gameState.currentTurn.name)")
-      Text("Playing state: \(appState.gameState.currentTurn.local ? "📱" : "⏱️")")
+      playConditionView()
       
       Spacer()
       
@@ -39,6 +38,20 @@ struct ContentView: View {
       
     } // VStack
   } // body
+  
+  @ViewBuilder func playConditionView() -> some View {
+    switch appState.gameState.playCondition {
+    case .playing:
+      VStack {
+        Text("Current turn: \(appState.gameState.currentTurn.name)")
+        Text("Playing state: \(appState.gameState.currentTurn.local ? "📱" : "⏱️")")
+      }
+    case .win(let player):
+      Text("Player \(player.name) Won!")
+    case .tie:
+      Text("Tie!")
+    }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
