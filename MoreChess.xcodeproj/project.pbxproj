@@ -42,6 +42,7 @@
 		B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9292BAF29DF002A20F7 /* Players.swift */; };
 		B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */; };
 		B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */; };
+		B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92F2BB05325002A20F7 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B9FAC9292BAF29DF002A20F7 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveValidator.swift; sourceTree = "<group>"; };
 		B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCondition.swift; sourceTree = "<group>"; };
+		B9FAC92F2BB05325002A20F7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				B95CE5102AD4CB5B00978591 /* ContentView.swift */,
+				B9FAC92F2BB05325002A20F7 /* GameView.swift */,
 				B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */,
 				B90F55AB2BA6289800874F00 /* PieceView.swift */,
 				B90F55A82BA61F6E00874F00 /* MovesView.swift */,
@@ -434,6 +437,7 @@
 				B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */,
 				B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */,
 				B94B61B02B461D3200C998F3 /* Piece.swift in Sources */,
+				B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */,
 				B9FAC9222BAF1DCD002A20F7 /* GameRepository.swift in Sources */,
 				B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,

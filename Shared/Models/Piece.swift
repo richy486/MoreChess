@@ -12,6 +12,8 @@ struct Piece {
   let player: Player
   let validMoves: [GridCoordinate]
   
+  // TODO: Add option to pass through other pieces.
+  
   // This blows up the system
   func drawMoves() -> String {
     let allMoves = validMoves[0...0].map { $0.draw() }.joined(separator: "\n")
