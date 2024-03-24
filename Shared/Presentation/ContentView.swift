@@ -11,8 +11,16 @@ struct ContentView: View {
   @State var appState = AppState()
   
   var body: some View {
-    GameView()
-      .environment(appState)
+    Group {
+//      if appState.lobbyState.inGame == false {
+//        LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
+//        
+//      } else {
+        GameView()
+//      }
+      
+    }
+    .environment(appState)
   } // body
   
   

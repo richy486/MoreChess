@@ -8,6 +8,7 @@
 import Foundation
 
 @Observable class AppState {
+  var lobbyState = LobbyState()
   var gameState = GameState()
   var positioningState = PositioningState()
   var layoutState = LayoutState()

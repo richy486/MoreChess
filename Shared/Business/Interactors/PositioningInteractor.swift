@@ -9,9 +9,13 @@ import Foundation
 
 // TODO: "Facade" this with a protocol so data can be mocked.
 
-struct PositioningInteractor {
+class PositioningInteractor {
   let appState: AppState
   let gameRepository = GameRepository()
+  
+  init(appState: AppState) {
+    self.appState = appState
+  }
   
   func update(dragOffset: CGSize, from fromGridPosition: GridCoordinate) {
     

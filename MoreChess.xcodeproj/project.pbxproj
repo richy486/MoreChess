@@ -43,6 +43,16 @@
 		B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */; };
 		B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */; };
 		B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92F2BB05325002A20F7 /* GameView.swift */; };
+		B9FAC9342BB053CC002A20F7 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9332BB053CC002A20F7 /* LobbyView.swift */; };
+		B9FAC9372BB054C2002A20F7 /* SolidButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */; };
+		B9FAC9392BB0586C002A20F7 /* LobbyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9382BB0586C002A20F7 /* LobbyState.swift */; };
+		B9FAC93D2BB058DB002A20F7 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC93C2BB058DB002A20F7 /* ServiceType.swift */; };
+		B9FAC93F2BB059CD002A20F7 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC93E2BB059CD002A20F7 /* GameService.swift */; };
+		B9FAC9412BB05A63002A20F7 /* LobbyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9402BB05A63002A20F7 /* LobbyInteractor.swift */; };
+		B9FAC9432BB06315002A20F7 /* LobbyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9422BB06315002A20F7 /* LobbyRepository.swift */; };
+		B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9442BB06BD4002A20F7 /* HostingView.swift */; };
+		B9FAC9472BB06C0C002A20F7 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9462BB06C0C002A20F7 /* ClientView.swift */; };
+		B9FAC9492BB06C91002A20F7 /* SimpleNavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +106,16 @@
 		B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveValidator.swift; sourceTree = "<group>"; };
 		B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCondition.swift; sourceTree = "<group>"; };
 		B9FAC92F2BB05325002A20F7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B9FAC9332BB053CC002A20F7 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
+		B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButtonStyle.swift; sourceTree = "<group>"; };
+		B9FAC9382BB0586C002A20F7 /* LobbyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyState.swift; sourceTree = "<group>"; };
+		B9FAC93C2BB058DB002A20F7 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		B9FAC93E2BB059CD002A20F7 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		B9FAC9402BB05A63002A20F7 /* LobbyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyInteractor.swift; sourceTree = "<group>"; };
+		B9FAC9422BB06315002A20F7 /* LobbyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyRepository.swift; sourceTree = "<group>"; };
+		B9FAC9442BB06BD4002A20F7 /* HostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingView.swift; sourceTree = "<group>"; };
+		B9FAC9462BB06C0C002A20F7 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationBackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,10 +218,10 @@
 			isa = PBXGroup;
 			children = (
 				B95CE5102AD4CB5B00978591 /* ContentView.swift */,
-				B9FAC92F2BB05325002A20F7 /* GameView.swift */,
-				B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */,
-				B90F55AB2BA6289800874F00 /* PieceView.swift */,
+				B9FAC9312BB053AD002A20F7 /* Lobby */,
+				B9FAC9322BB053B2002A20F7 /* Game */,
 				B90F55A82BA61F6E00874F00 /* MovesView.swift */,
+				B9FAC9352BB054A2002A20F7 /* Elements */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -218,6 +238,7 @@
 		B9ABF7A42BAEF04C00907C61 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAC9422BB06315002A20F7 /* LobbyRepository.swift */,
 				B9FAC9212BAF1DCD002A20F7 /* GameRepository.swift */,
 			);
 			path = DataAccess;
@@ -226,12 +247,8 @@
 		B9ABF7A52BAEF0C500907C61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B94B61AF2B461D3200C998F3 /* Piece.swift */,
-				B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */,
-				B9FAC91E2BAF0D6A002A20F7 /* Player.swift */,
-				B9FAC9292BAF29DF002A20F7 /* Players.swift */,
-				B9FAC9232BAF1E9F002A20F7 /* Board.swift */,
-				B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */,
+				B9FAC93A2BB058BC002A20F7 /* Lobby */,
+				B9FAC93B2BB058C2002A20F7 /* Game */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +256,7 @@
 		B9FAC9122BAEF69F002A20F7 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAC9402BB05A63002A20F7 /* LobbyInteractor.swift */,
 				B9FAC9142BAEF6C3002A20F7 /* PositioningInteractor.swift */,
 			);
 			path = Interactors;
@@ -248,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				B9ABF7A62BAEF11E00907C61 /* AppState.swift */,
+				B9FAC9382BB0586C002A20F7 /* LobbyState.swift */,
 				B9ABF7A82BAEF18A00907C61 /* GameState.swift */,
 				B9FAC9102BAEF492002A20F7 /* PositioningState.swift */,
 				B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */,
@@ -263,6 +282,57 @@
 				B9FAC92B2BAF3102002A20F7 /* MoveValidator.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B9FAC9312BB053AD002A20F7 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC9332BB053CC002A20F7 /* LobbyView.swift */,
+				B9FAC9442BB06BD4002A20F7 /* HostingView.swift */,
+				B9FAC9462BB06C0C002A20F7 /* ClientView.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		B9FAC9322BB053B2002A20F7 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC92F2BB05325002A20F7 /* GameView.swift */,
+				B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */,
+				B90F55AB2BA6289800874F00 /* PieceView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		B9FAC9352BB054A2002A20F7 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */,
+				B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		B9FAC93A2BB058BC002A20F7 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC93C2BB058DB002A20F7 /* ServiceType.swift */,
+				B9FAC93E2BB059CD002A20F7 /* GameService.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		B9FAC93B2BB058C2002A20F7 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				B94B61AF2B461D3200C998F3 /* Piece.swift */,
+				B9FAC91A2BAF0CA7002A20F7 /* Pieces.swift */,
+				B9FAC91E2BAF0D6A002A20F7 /* Player.swift */,
+				B9FAC9292BAF29DF002A20F7 /* Players.swift */,
+				B9FAC9232BAF1E9F002A20F7 /* Board.swift */,
+				B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,23 +495,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */,
+				B9FAC93F2BB059CD002A20F7 /* GameService.swift in Sources */,
 				B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */,
 				B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */,
 				B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */,
+				B9FAC9392BB0586C002A20F7 /* LobbyState.swift in Sources */,
 				B9FAC9112BAEF492002A20F7 /* PositioningState.swift in Sources */,
+				B9FAC9372BB054C2002A20F7 /* SolidButtonStyle.swift in Sources */,
+				B9FAC9412BB05A63002A20F7 /* LobbyInteractor.swift in Sources */,
 				B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B9FAC9242BAF1E9F002A20F7 /* Board.swift in Sources */,
+				B9FAC9472BB06C0C002A20F7 /* ClientView.swift in Sources */,
 				B95CE5392AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */,
 				B95CE5372AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
 				B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */,
+				B9FAC9342BB053CC002A20F7 /* LobbyView.swift in Sources */,
+				B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */,
 				B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */,
+				B9FAC93D2BB058DB002A20F7 /* ServiceType.swift in Sources */,
 				B94B61B02B461D3200C998F3 /* Piece.swift in Sources */,
 				B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */,
+				B9FAC9492BB06C91002A20F7 /* SimpleNavigationBackButton.swift in Sources */,
 				B9FAC9222BAF1DCD002A20F7 /* GameRepository.swift in Sources */,
 				B90F55A92BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */,
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
+				B9FAC9432BB06315002A20F7 /* LobbyRepository.swift in Sources */,
 				B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */,
 				B9FAC91F2BAF0D6A002A20F7 /* Player.swift in Sources */,
 				B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */,
