@@ -32,7 +32,8 @@ struct LobbyView: View {
   private func home() -> some View {
     VStack {
       Text("Host or join a new game")
-        
+        .font(StyleFont.title)
+      Text("Select one option")
       HStack {
         Button("Host") {
           lobbyInteractor.select(serviceType: .host)

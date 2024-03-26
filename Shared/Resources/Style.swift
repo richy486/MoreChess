@@ -14,6 +14,7 @@ struct StyleModifier: ViewModifier {
       .frame(maxWidth: .infinity, maxHeight: .infinity) // TODO: add option to disable this line.
       .background(Color.background)
       .foregroundStyle(Color.foreground)
+      .environment(\.font, StyleFont.body)
   }
 }
 

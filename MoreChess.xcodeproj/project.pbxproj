@@ -56,6 +56,12 @@
 		B9FAC94B2BB06FB2002A20F7 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */; };
 		B9FAC94F2BB2E833002A20F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC94E2BB2E833002A20F7 /* Color.swift */; };
 		B9FAC9512BB2F46D002A20F7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9502BB2F46D002A20F7 /* Style.swift */; };
+		B9FAC9542BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9532BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf */; };
+		B9FAC9552BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9532BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf */; };
+		B9FAC9582BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */; };
+		B9FAC9592BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */; };
+		B9FAC95B2BB2FD0C002A20F7 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */; };
+		B9FAC95C2BB2FD0C002A20F7 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +128,10 @@
 		B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
 		B9FAC94E2BB2E833002A20F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B9FAC9502BB2F46D002A20F7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		B9FAC9532BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans_7pt_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		B9FAC95E2BB2FE66002A20F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,7 @@
 			children = (
 				B95CE50E2AD4CB5B00978591 /* Shared */,
 				B95CE51D2AD4CB5E00978591 /* macOS */,
+				B9FAC95E2BB2FE66002A20F7 /* Info.plist */,
 				B95CE5262AD4CB5E00978591 /* Tests iOS */,
 				B95CE5322AD4CB5E00978591 /* Tests macOS */,
 				B95CE5172AD4CB5E00978591 /* Products */,
@@ -346,10 +357,21 @@
 		B9FAC94D2BB2E821002A20F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAC9522BB2F6DB002A20F7 /* Fonts */,
 				B9FAC94E2BB2E833002A20F7 /* Color.swift */,
+				B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */,
 				B9FAC9502BB2F46D002A20F7 /* Style.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9FAC9522BB2F6DB002A20F7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */,
+				B9FAC9532BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,7 +499,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC9542BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */,
 				B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */,
+				B9FAC9582BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +510,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC9592BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */,
+				B9FAC9552BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC95B2BB2FD0C002A20F7 /* Typography.swift in Sources */,
 				B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */,
 				B9FAC94F2BB2E833002A20F7 /* Color.swift in Sources */,
 				B9FAC93F2BB059CD002A20F7 /* GameService.swift in Sources */,
@@ -559,6 +586,7 @@
 				B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */,
 				B94B61B12B461D3200C998F3 /* Piece.swift in Sources */,
 				B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */,
+				B9FAC95C2BB2FD0C002A20F7 /* Typography.swift in Sources */,
 				B94B61F62B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,6 +746,7 @@
 				DEVELOPMENT_TEAM = KWV3LMSGNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -749,6 +778,7 @@
 				DEVELOPMENT_TEAM = KWV3LMSGNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -784,6 +814,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -812,6 +843,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shared/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
