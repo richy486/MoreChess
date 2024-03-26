@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MoreChessApp: App {
   
-  /*
+  
   init() {
     for family in UIFont.familyNames {
       print("\(family)")
@@ -19,7 +19,7 @@ struct MoreChessApp: App {
       }
     }
   }
-   */
+   
   
   var body: some Scene {
     WindowGroup {

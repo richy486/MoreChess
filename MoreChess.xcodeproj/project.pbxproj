@@ -44,7 +44,7 @@
 		B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */; };
 		B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC92F2BB05325002A20F7 /* GameView.swift */; };
 		B9FAC9342BB053CC002A20F7 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9332BB053CC002A20F7 /* LobbyView.swift */; };
-		B9FAC9372BB054C2002A20F7 /* SolidButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */; };
+		B9FAC9372BB054C2002A20F7 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9362BB054C2002A20F7 /* ButtonStyles.swift */; };
 		B9FAC9392BB0586C002A20F7 /* LobbyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9382BB0586C002A20F7 /* LobbyState.swift */; };
 		B9FAC93D2BB058DB002A20F7 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC93C2BB058DB002A20F7 /* ServiceType.swift */; };
 		B9FAC93F2BB059CD002A20F7 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC93E2BB059CD002A20F7 /* GameService.swift */; };
@@ -62,6 +62,10 @@
 		B9FAC9592BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */; };
 		B9FAC95B2BB2FD0C002A20F7 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */; };
 		B9FAC95C2BB2FD0C002A20F7 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */; };
+		B9FAC9602BB30D8F002A20F7 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95F2BB30D8F002A20F7 /* StyleConstants.swift */; };
+		B9FAC9612BB30D8F002A20F7 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC95F2BB30D8F002A20F7 /* StyleConstants.swift */; };
+		B9FAC9632BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9622BB30F40002A20F7 /* Nunito-SemiBold.ttf */; };
+		B9FAC9642BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC9622BB30F40002A20F7 /* Nunito-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +120,7 @@
 		B9FAC92D2BB04A01002A20F7 /* PlayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCondition.swift; sourceTree = "<group>"; };
 		B9FAC92F2BB05325002A20F7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		B9FAC9332BB053CC002A20F7 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
-		B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButtonStyle.swift; sourceTree = "<group>"; };
+		B9FAC9362BB054C2002A20F7 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		B9FAC9382BB0586C002A20F7 /* LobbyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyState.swift; sourceTree = "<group>"; };
 		B9FAC93C2BB058DB002A20F7 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		B9FAC93E2BB059CD002A20F7 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		B9FAC95E2BB2FE66002A20F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FAC95F2BB30D8F002A20F7 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
+		B9FAC9622BB30F40002A20F7 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,7 +331,7 @@
 		B9FAC9352BB054A2002A20F7 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				B9FAC9362BB054C2002A20F7 /* SolidButtonStyle.swift */,
+				B9FAC9362BB054C2002A20F7 /* ButtonStyles.swift */,
 				B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */,
 				B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */,
 			);
@@ -361,6 +367,7 @@
 				B9FAC94E2BB2E833002A20F7 /* Color.swift */,
 				B9FAC95A2BB2FD0C002A20F7 /* Typography.swift */,
 				B9FAC9502BB2F46D002A20F7 /* Style.swift */,
+				B9FAC95F2BB30D8F002A20F7 /* StyleConstants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -369,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				B9FAC9572BB2F92E002A20F7 /* Nunito-Regular.ttf */,
+				B9FAC9622BB30F40002A20F7 /* Nunito-SemiBold.ttf */,
 				B9FAC9532BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf */,
 			);
 			path = Fonts;
@@ -503,6 +511,7 @@
 				B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */,
 				B9FAC9582BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */,
+				B9FAC9632BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAC9642BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */,
 				B9FAC9592BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */,
 				B9FAC9552BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */,
@@ -546,10 +556,11 @@
 				B9FAC92E2BB04A01002A20F7 /* PlayCondition.swift in Sources */,
 				B9FAC9392BB0586C002A20F7 /* LobbyState.swift in Sources */,
 				B9FAC9112BAEF492002A20F7 /* PositioningState.swift in Sources */,
-				B9FAC9372BB054C2002A20F7 /* SolidButtonStyle.swift in Sources */,
+				B9FAC9372BB054C2002A20F7 /* ButtonStyles.swift in Sources */,
 				B9FAC9412BB05A63002A20F7 /* LobbyInteractor.swift in Sources */,
 				B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */,
 				B9FAC9242BAF1E9F002A20F7 /* Board.swift in Sources */,
+				B9FAC9602BB30D8F002A20F7 /* StyleConstants.swift in Sources */,
 				B9FAC9472BB06C0C002A20F7 /* ClientView.swift in Sources */,
 				B95CE5392AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */,
@@ -586,6 +597,7 @@
 				B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */,
 				B94B61B12B461D3200C998F3 /* Piece.swift in Sources */,
 				B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */,
+				B9FAC9612BB30D8F002A20F7 /* StyleConstants.swift in Sources */,
 				B9FAC95C2BB2FD0C002A20F7 /* Typography.swift in Sources */,
 				B94B61F62B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
 			);

@@ -8,6 +8,12 @@
 import SwiftUI
 
 extension Color {
+  
+  // Functional Colors
   static let foreground = Color("Foreground")
   static let background = Color("Background")
+  static let disabled = Color.brandedGray
+    
+  // Defined Colors
+  static let brandedGray = Color("Gray")
 }

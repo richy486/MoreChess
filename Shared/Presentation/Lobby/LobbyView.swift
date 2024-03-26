@@ -38,12 +38,12 @@ struct LobbyView: View {
         Button("Host") {
           lobbyInteractor.select(serviceType: .host)
         }
-        .buttonStyle(SolidButtonStyle())
+        .buttonStyle(PrimaryButtonStyle())
         
         Button("Join") {
           lobbyInteractor.select(serviceType: .client)
         }
-        .buttonStyle(SolidButtonStyle())
+        .buttonStyle(PrimaryButtonStyle())
       } // HStack
     }
     .style()
