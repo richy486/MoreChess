@@ -16,7 +16,7 @@ extension View {
           Button(action: {
             dismiss()
           }) {
-            Label("Back", systemImage: "chevron.left")
+            Label("Back", systemImage: Icon.back)
               .foregroundStyle(.foreground)
           }
         }

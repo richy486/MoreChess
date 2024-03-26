@@ -65,7 +65,7 @@ struct GameState {
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
-      [Pieces.🐴(players[0]), Pieces.🥷(players[0]), Pieces.🤴(players[0]), Pieces.👸(players[0]), PieceGenerator.randomPiece(forPlayer: players[0], horizontalSize: 5, verticalSize: 5)],
+      [Pieces.🐴(players[0]), Pieces.👉(players[0]), Pieces.🤴(players[0]), Pieces.👸(players[0]), PieceGenerator.randomPiece(forPlayer: players[0], horizontalSize: 5, verticalSize: 5)],
     ]
 
     let allBoard = initialBoard.joined().compactMap { $0 }

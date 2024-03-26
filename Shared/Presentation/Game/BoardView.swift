@@ -42,7 +42,7 @@ struct BoardView: View {
                   .frame(width: appState.layoutState.elementDiameter, 
                          height: appState.layoutState.elementDiameter)
                   .background(isTarget ? Constants.targetColor : piece.player.color)
-                  .offset(x: offset.width, y: offset.height)
+                  .offset(x: offset.width * (isRTL ? -1 : 1), y: offset.height)
                   .gesture(
                     DragGesture()
                       .onChanged { gesture in
