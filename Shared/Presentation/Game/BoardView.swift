@@ -39,7 +39,8 @@ struct BoardView: View {
               if let piece {
                 let offset = appState.positioningState.pieceOffset(gridPosition)
                 PieceView(piece: piece)
-                  .frame(width: appState.layoutState.elementDiameter, 
+                  .accessibility(label: Text("\(piece.description) piece"))
+                  .frame(width: appState.layoutState.elementDiameter,
                          height: appState.layoutState.elementDiameter)
                   .background(isTarget ? Constants.targetColor : piece.player.color)
                   .offset(x: offset.width * (isRTL ? -1 : 1), y: offset.height)

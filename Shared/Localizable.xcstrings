@@ -1,6 +1,24 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ piece" : {
+
+    },
+    "⌽" : {
+
+    },
+    "📱" : {
+
+    },
+    "Back" : {
+
+    },
+    "Button" : {
+
+    },
+    "Client" : {
+
+    },
     "color" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -28,6 +46,100 @@
           }
         }
       }
+    },
+    "Current turn: %@" : {
+
+    },
+    "Disabled" : {
+
+    },
+    "Game: %@" : {
+
+    },
+    "Host" : {
+
+    },
+    "Host or join a new game" : {
+
+    },
+    "Hosting" : {
+
+    },
+    "Join" : {
+
+    },
+    "More Chess 🐴" : {
+
+    },
+    "offset: %lf %lf" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "offset: %1$lf %2$lf"
+          }
+        }
+      }
+    },
+    "Player %@ Won!" : {
+
+    },
+    "Playing state: " : {
+
+    },
+    "Press Me" : {
+
+    },
+    "Row count: %lld, Column count: %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Row count: %1$lld, Column count: %2$lld"
+          }
+        }
+      }
+    },
+    "Select one option" : {
+
+    },
+    "selected:" : {
+
+    },
+    "share this code to other player: %@-%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "share this code to other player: %1$@-%2$@"
+          }
+        }
+      }
+    },
+    "target:" : {
+
+    },
+    "target: %lld %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "target: %1$lld %2$lld"
+          }
+        }
+      }
+    },
+    "Tie!" : {
+
+    },
+    "TODO: Add moves list" : {
+
+    },
+    "Very long text for a button" : {
+
+    },
+    "Waiting for other player to join" : {
+
     }
   },
   "version" : "1.0"

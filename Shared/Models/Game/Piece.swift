@@ -8,15 +8,17 @@
 import Foundation
 
 struct Piece {
-  let icon: String
+  let icon: Character
   let player: Player
   let validMoves: [GridCoordinate]
   
   // TODO: Add option to pass through other pieces.
   
-  // This blows up the system
-  func drawMoves() -> String {
-    let allMoves = validMoves[0...0].map { $0.draw() }.joined(separator: "\n")
-    return allMoves
+  var description: String {
+    return icon.unicodeScalars
+      .map { String($0.properties.name ?? "-") }
+      .joined(separator: ", ")
+      .capitalized
   }
 }
+

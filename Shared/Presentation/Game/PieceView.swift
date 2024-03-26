@@ -10,7 +10,7 @@ import SwiftUI
 struct PieceView: View {
   let piece: Piece
   var body: some View {
-    Text(piece.icon)
+    Text(String(piece.icon))
       .font(.system(size: 999))
       .minimumScaleFactor(0.01)
   }
