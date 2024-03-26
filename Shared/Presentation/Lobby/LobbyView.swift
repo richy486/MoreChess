@@ -34,6 +34,7 @@ struct LobbyView: View {
       Text("Host or join a new game")
         .font(StyleFont.title)
       Text("Select one option")
+      Text("Color", comment: "Some text saying color")
       HStack {
         Button("Host") {
           lobbyInteractor.select(serviceType: .host)

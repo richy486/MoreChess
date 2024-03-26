@@ -70,6 +70,8 @@
 		B9FAC9672BB3129F002A20F7 /* LayoutDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9652BB3129F002A20F7 /* LayoutDirection.swift */; };
 		B9FAC9692BB312F7002A20F7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9682BB312F7002A20F7 /* Icons.swift */; };
 		B9FAC96A2BB312F7002A20F7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9682BB312F7002A20F7 /* Icons.swift */; };
+		B9FAC96F2BB317A4002A20F7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC96E2BB317A4002A20F7 /* Localizable.xcstrings */; };
+		B9FAC9702BB317A4002A20F7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B9FAC96E2BB317A4002A20F7 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,7 @@
 		B9FAC9622BB30F40002A20F7 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		B9FAC9652BB3129F002A20F7 /* LayoutDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDirection.swift; sourceTree = "<group>"; };
 		B9FAC9682BB312F7002A20F7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		B9FAC96E2BB317A4002A20F7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,7 @@
 				B95CE5112AD4CB5E00978591 /* Assets.xcassets */,
 				B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */,
 				B9FAC9202BAF14CB002A20F7 /* README.md */,
+				B9FAC96E2BB317A4002A20F7 /* Localizable.xcstrings */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -496,6 +500,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-AU",
 			);
 			mainGroup = B95CE5092AD4CB5A00978591;
 			productRefGroup = B95CE5172AD4CB5E00978591 /* Products */;
@@ -517,6 +522,7 @@
 			files = (
 				B9FAC9542BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */,
 				B9FAC9192BAF070C002A20F7 /* Launch Screen.storyboard in Resources */,
+				B9FAC96F2BB317A4002A20F7 /* Localizable.xcstrings in Resources */,
 				B9FAC9582BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */,
 				B9FAC9632BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */,
@@ -528,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FAC9642BB30F40002A20F7 /* Nunito-SemiBold.ttf in Resources */,
+				B9FAC9702BB317A4002A20F7 /* Localizable.xcstrings in Resources */,
 				B9FAC9592BB2F92E002A20F7 /* Nunito-Regular.ttf in Resources */,
 				B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */,
 				B9FAC9552BB2F706002A20F7 /* NunitoSans_7pt_Condensed-Bold.ttf in Resources */,
