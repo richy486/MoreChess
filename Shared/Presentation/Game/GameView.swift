@@ -37,6 +37,7 @@ struct GameView: View {
       Text("Row count: \(appState.gameState.rowCount), Column count: \(appState.gameState.columnCount)")
       
     } // VStack
+    .style()
   } // body
   
   @ViewBuilder func playConditionView() -> some View {

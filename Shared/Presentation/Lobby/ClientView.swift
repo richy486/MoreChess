@@ -25,6 +25,7 @@ struct ClientView: View {
     .navigationTitle("Join")
     .navigationBarTitleDisplayMode(.inline)
     .simpleNavigationBackButton(dismiss: dismiss)
+    .style()
     .onAppear(perform: lobbyInteractor.fetchAvailableGames)
   }
 }

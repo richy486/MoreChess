@@ -12,7 +12,7 @@ struct SolidButtonStyle: ButtonStyle {
     configuration.label
       .padding()
       .background(.tint)
-      .foregroundStyle(.background)
+      .foregroundStyle(Color.background)
       .font(.headline)
       .clipShape(Capsule())
       .scaleEffect(configuration.isPressed ? 1.2 : 1)
@@ -24,4 +24,5 @@ struct SolidButtonStyle: ButtonStyle {
   Button("Press Me") {
   }
   .buttonStyle(SolidButtonStyle())
+  .style()
 }

@@ -16,6 +16,7 @@ struct LobbyView: View {
   
   var body: some View {
     NavigationStack(path: pathBinding()) {
+      
       home()
         .navigationDestination(for: LobbyState.LobbyPages.self) { destination in
           switch destination {
@@ -31,6 +32,7 @@ struct LobbyView: View {
   private func home() -> some View {
     VStack {
       Text("Host or join a new game")
+        
       HStack {
         Button("Host") {
           lobbyInteractor.select(serviceType: .host)
@@ -43,6 +45,7 @@ struct LobbyView: View {
         .buttonStyle(SolidButtonStyle())
       } // HStack
     }
+    .style()
     .navigationTitle("More Chess 🐴")
     .navigationBarTitleDisplayMode(.inline)
   }

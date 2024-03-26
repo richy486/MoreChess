@@ -14,11 +14,9 @@ struct ContentView: View {
     Group {
       if appState.lobbyState.inGame == false {
         LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
-        
       } else {
         GameView()
       }
-      
     }
     .environment(appState)
   } // body

@@ -54,6 +54,8 @@
 		B9FAC9472BB06C0C002A20F7 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9462BB06C0C002A20F7 /* ClientView.swift */; };
 		B9FAC9492BB06C91002A20F7 /* SimpleNavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */; };
 		B9FAC94B2BB06FB2002A20F7 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */; };
+		B9FAC94F2BB2E833002A20F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC94E2BB2E833002A20F7 /* Color.swift */; };
+		B9FAC9512BB2F46D002A20F7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAC9502BB2F46D002A20F7 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		B9FAC9462BB06C0C002A20F7 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		B9FAC9482BB06C91002A20F7 /* SimpleNavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationBackButton.swift; sourceTree = "<group>"; };
 		B9FAC94A2BB06FB2002A20F7 /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
+		B9FAC94E2BB2E833002A20F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B9FAC9502BB2F46D002A20F7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 				B9ABF7A42BAEF04C00907C61 /* DataAccess */,
 				B9ABF7A52BAEF0C500907C61 /* Models */,
 				B9FAC91C2BAF0CDE002A20F7 /* Utils */,
+				B9FAC94D2BB2E821002A20F7 /* Resources */,
 				B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */,
 				B95CE5112AD4CB5E00978591 /* Assets.xcassets */,
 				B9FAC9182BAF070C002A20F7 /* Launch Screen.storyboard */,
@@ -338,6 +343,15 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		B9FAC94D2BB2E821002A20F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAC94E2BB2E833002A20F7 /* Color.swift */,
+				B9FAC9502BB2F46D002A20F7 /* Style.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FAC92A2BAF29DF002A20F7 /* Players.swift in Sources */,
+				B9FAC94F2BB2E833002A20F7 /* Color.swift in Sources */,
 				B9FAC93F2BB059CD002A20F7 /* GameService.swift in Sources */,
 				B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */,
 				B9FAC9172BAEFFAC002A20F7 /* LayoutState.swift in Sources */,
@@ -527,6 +542,7 @@
 				B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */,
 				B9FAC9432BB06315002A20F7 /* LobbyRepository.swift in Sources */,
 				B9FAC91B2BAF0CA7002A20F7 /* Pieces.swift in Sources */,
+				B9FAC9512BB2F46D002A20F7 /* Style.swift in Sources */,
 				B9FAC91F2BAF0D6A002A20F7 /* Player.swift in Sources */,
 				B9FAC9152BAEF6C3002A20F7 /* PositioningInteractor.swift in Sources */,
 			);

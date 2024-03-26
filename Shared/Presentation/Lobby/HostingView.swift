@@ -17,7 +17,6 @@ struct HostingView: View {
     VStack {
       Text("Hosting")
       Text("share this code to other player: \(gameService.gameId)-\(gameService.clientId)")
-      
       Spacer().frame(height: 20)
       
       HStack {
@@ -28,6 +27,7 @@ struct HostingView: View {
     .navigationTitle("Host")    
     .navigationBarTitleDisplayMode(.inline)
     .simpleNavigationBackButton(dismiss: dismiss)
+    .style()
     .onAppear {
       lobbyInteractor.checkForOpponentClient(gameService: gameService)
     }
