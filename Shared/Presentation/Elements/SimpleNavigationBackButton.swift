@@ -17,7 +17,7 @@ extension View {
             dismiss()
           }) {
             Label("Back", systemImage: Icon.back)
-              .foregroundStyle(.foreground)
+              .foregroundStyle(Color.foreground)
           }
         }
       }
