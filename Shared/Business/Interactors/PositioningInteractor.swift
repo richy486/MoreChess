@@ -48,11 +48,11 @@ class PositioningInteractor {
     let gridOffset = gridOffsetFrom(offset: dragOffset)
     
     appState.positioningState.targetGrid = 
-      MoveValidator.targetGridFrom(dragIndex: fromGridPosition,
-                                   gridOffset: gridOffset,
-                                   board: appState.gameState.board,
-                                   columnCount: appState.gameState.columnCount,
-                                   rowCount: appState.gameState.rowCount)
+    MoveValidator.validTargetPosition(startingCoordinate: fromGridPosition,
+                                      toGridOffset: gridOffset,
+                                      board: appState.gameState.board,
+                                      columnCount: appState.gameState.columnCount,
+                                      rowCount: appState.gameState.rowCount)
   }
   
   func endDrag() {
@@ -70,7 +70,8 @@ class PositioningInteractor {
             
       // Fetch the next board
       // TODO: Make this work for two non-local players.
-      if appState.gameState.playCondition == .playing && appState.gameState.currentTurn.local == false {
+      if appState.gameState.playCondition == .playing 
+          && appState.gameState.currentTurn.local == false {
         Task {
           appState.gameState.board = await gameRepository
             .fetchBoard(currentPlayer: appState.gameState.currentTurn,

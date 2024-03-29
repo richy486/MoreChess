@@ -67,11 +67,12 @@ struct GameRepository {
     let clampedMove = GridCoordinate(column: clampedColumn, row: clampedRow)
     
     // Get target position
-    guard let targetPosition = MoveValidator.targetGridFrom(dragIndex: randomPiecePosition,
-                                                            gridOffset: clampedMove,
-                                                            board: board,
-                                                            columnCount: columnCount,
-                                                            rowCount: rowCount) else {
+    guard let targetPosition = MoveValidator
+      .validTargetPosition(startingCoordinate: randomPiecePosition,
+                           toGridOffset: clampedMove,
+                           board: board,
+                           columnCount: columnCount,
+                           rowCount: rowCount) else {
       // Invalid move
       // TODO: Must return a valid move, try again? filter valid targets?
       print("Generated invalid move")
