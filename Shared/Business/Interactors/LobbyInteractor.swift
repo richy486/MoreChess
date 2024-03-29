@@ -11,7 +11,7 @@ import Foundation
 
 class LobbyInteractor {
   let appState: AppState
-  let lobbyRepository = LobbyRepository()
+  let lobbyRepository = LobbyRepositoryWeb()
   
   init(appState: AppState) {
     self.appState = appState
@@ -37,7 +37,7 @@ class LobbyInteractor {
   }
   
   func checkForOpponentClient(gameService: GameService) {
-    LobbyRepository.checks = 0
+//    LobbyRepository.checks = 0
     Task {
       var resultFound = false
       while resultFound == false {
