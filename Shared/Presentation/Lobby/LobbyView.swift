@@ -62,6 +62,6 @@ struct LobbyView: View {
 
 #Preview {
   let appState = AppState()
-  return LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
+  return LobbyView(lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
     .environment(appState)
 }

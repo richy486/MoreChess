@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LobbyState {
+@Observable class LobbyState {
   
   enum LobbyPages: Hashable {
     case host(gameService: GameService)

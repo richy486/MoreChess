@@ -37,5 +37,5 @@ struct HostingView: View {
 #Preview {
   let appState = AppState()
   return HostingView(gameService: GameService(gameId: "a", hostId: "v", clientId: "g"), 
-                     lobbyInteractor: LobbyInteractor(appState: appState))
+                     lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
 }

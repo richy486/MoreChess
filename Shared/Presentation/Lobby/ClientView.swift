@@ -32,6 +32,6 @@ struct ClientView: View {
 
 #Preview {
   let appState = AppState()
-  return ClientView(lobbyInteractor: LobbyInteractor(appState: appState))
+  return ClientView(lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
     .environment(appState)
 }

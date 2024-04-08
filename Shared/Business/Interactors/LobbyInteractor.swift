@@ -10,11 +10,11 @@ import Foundation
 // TODO: "Facade" this with a protocol so data can be mocked.
 
 class LobbyInteractor {
-  let appState: AppState
+  let lobbyState: LobbyState
   let lobbyRepository = LobbyRepository()
   
-  init(appState: AppState) {
-    self.appState = appState
+  init(lobbyState: LobbyState) {
+    self.lobbyState = lobbyState
   }
   
   func select(serviceType: ServiceType) {
@@ -22,17 +22,17 @@ class LobbyInteractor {
     case .host:
       Task {
         let gameService = await lobbyRepository.createGame()
-        appState.lobbyState.path.append(.host(gameService: gameService))
+        lobbyState.path.append(.host(gameService: gameService))
       }
     case .client:
-      appState.lobbyState.path.append(.client)
+      lobbyState.path.append(.client)
     }
     
   }
   
   func fetchAvailableGames() {
     Task {
-      appState.lobbyState.availableGames = await lobbyRepository.availableGames()
+      lobbyState.availableGames = await lobbyRepository.availableGames()
     }
   }
   
@@ -44,14 +44,14 @@ class LobbyInteractor {
         resultFound = await lobbyRepository.opponentJoined(gameId: gameService.gameId)
       }
       
-      appState.lobbyState.currentGameService = gameService
+      lobbyState.currentGameService = gameService
     }
   }
   
   func joinGame(gameService: GameService) {
     Task {
       await lobbyRepository.joinGame(gameService: gameService)
-      appState.lobbyState.currentGameService = gameService
+      lobbyState.currentGameService = gameService
     }
   }
 }

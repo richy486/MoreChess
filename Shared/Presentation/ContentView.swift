@@ -13,7 +13,7 @@ struct ContentView: View {
   var body: some View {
     Group {
       if appState.lobbyState.inGame == false {
-        LobbyView(lobbyInteractor: LobbyInteractor(appState: appState))
+        LobbyView(lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
       } else {
         GameView()
       }
