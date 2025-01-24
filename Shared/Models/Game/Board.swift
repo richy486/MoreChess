@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias Board = [[Piece?]]
+typealias Board = [[GamePiece?]]

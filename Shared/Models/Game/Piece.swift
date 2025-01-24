@@ -7,15 +7,25 @@
 
 import Foundation
 
-struct Piece {
-  let icon: Character
+/// Piece that is used in the game.
+struct GamePiece {
+  let pieceBase: PieceBase
   let player: Player
-  let validMoves: [GridCoordinate]
-  
+
+  init(pieceBase: PieceBase, player: Player) {
+    self.pieceBase = pieceBase
+    self.player = player
+  }
+
+  init(icon: Character, player: Player, validMoves: [GridCoordinate]) {
+    self.pieceBase = PieceBase(icon: icon, validMoves: validMoves)
+    self.player = player
+  }
+
   // TODO: Add option to pass through other pieces.
   
   var description: String {
-    return icon.unicodeScalars
+    return pieceBase.icon.unicodeScalars
       .map { String($0.properties.name ?? "-") }
       .joined(separator: ", ")
       .capitalized

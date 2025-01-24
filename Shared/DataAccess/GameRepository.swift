@@ -44,7 +44,7 @@ class GameRepository {
     }
     
     // Get a random valid move
-    guard let move = piece.validMoves.randomElement() else {
+    guard let move = piece.pieceBase.validMoves.randomElement() else {
       fatalError("Can't get random move")
     }
     

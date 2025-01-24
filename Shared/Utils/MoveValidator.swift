@@ -38,7 +38,7 @@ struct MoveValidator {
     }
     
     // Validate position
-    guard currentPlayerPiece.validMoves.first(where: { validMove in
+    guard currentPlayerPiece.pieceBase.validMoves.first(where: { validMove in
       // Check for not `moveDown`.
       // TODO: Bug where 👉 piece is rotated when board is flipped.
       let validMoveRow = currentPlayerPiece.player.movingDown ? validMove.row : validMove.row * -1

@@ -25,7 +25,7 @@ struct GameView: View {
       // Debug
       Text("offset: \(appState.positioningState.dragOffset.width) \(appState.positioningState.dragOffset.height)")
       if let selectedGridPosition = appState.positioningState.selectedGridPosition, let piece = appState.gameState.board[selectedGridPosition.row][selectedGridPosition.column] {
-        Text("selected: col: \(selectedGridPosition.column) row: \(selectedGridPosition.row) \(piece.icon)")
+        Text("selected: col: \(selectedGridPosition.column) row: \(selectedGridPosition.row) \(piece.pieceBase.icon)")
       } else {
         Text("selected:")
       }

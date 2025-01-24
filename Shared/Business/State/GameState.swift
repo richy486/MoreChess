@@ -58,20 +58,33 @@ struct GameState {
   init() {
     currentTurnIndex = 0
     playCondition = .playing
-    
+
+    let horizontalSize = 5
+    let verticalSize = 5
+
+    // Helper piece generator functions.
+    func r(_ playerIndex: Int) -> GamePiece {
+      PieceGenerator.randomPiece(forPlayer: players[playerIndex],
+                                 horizontalSize: horizontalSize,
+                                 verticalSize: verticalSize)
+    }
+    func p(_ playerIndex: Int, _ pieceBases: PieceBase...) -> [GamePiece] {
+      pieceBases.map { GamePiece(pieceBase: $0, player: players[playerIndex]) }
+    }
+
     // Init board
     let initialBoard: Board = [
-      [PieceGenerator.randomPiece(forPlayer: players[1], horizontalSize: 5, verticalSize: 5), Pieces.🐴(players[1]), PieceGenerator.randomPiece(forPlayer: players[1], horizontalSize: 5, verticalSize: 5), Pieces.👉(players[1]), Pieces.🏰(players[1])],
+      [r(1), r(1), r(1), r(1), r(1)],
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
-      [Pieces.🐴(players[0]), Pieces.🥷(players[0]), Pieces.🤴(players[0]), Pieces.👸(players[0]), PieceGenerator.randomPiece(forPlayer: players[0], horizontalSize: 5, verticalSize: 5)],
+      p(0, 🏰, 🐴, 🤴, 👸) + [r(0)],
     ]
 
     let allBoard = initialBoard.joined().compactMap { $0 }
-    var uniquePieces: [Character: Piece] = [:]
+    var uniquePieces: [Character: GamePiece] = [:]
     for piece in allBoard {
-      uniquePieces[piece.icon] = piece
+      uniquePieces[piece.pieceBase.icon] = piece
     }
     
     for piece in uniquePieces {

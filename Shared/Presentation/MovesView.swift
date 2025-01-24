@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovesView: View {
-  let pieceList: [Piece]
+  let pieceList: [GamePiece]
   
   var body: some View {
     Text("TODO: Add moves list")

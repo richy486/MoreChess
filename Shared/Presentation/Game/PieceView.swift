@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PieceView: View {
-  let piece: Piece
+  let piece: GamePiece
   var body: some View {
-    Text(String(piece.icon))
+    Text(String(piece.pieceBase.icon))
       .font(.system(size: 999))
       .minimumScaleFactor(0.01)
   }
 }
 
 #Preview {
-  PieceView(piece: Pieces.🐴(Players.one(local: true)))
+  PieceView(piece: GamePiece(pieceBase: 🐴, player: Players.one(local: true)))
 }

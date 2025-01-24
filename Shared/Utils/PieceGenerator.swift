@@ -8,12 +8,12 @@
 import Foundation
 
 struct PieceGenerator {
-  static func randomPiece(forPlayer player: Player, horizontalSize: Int, verticalSize: Int) -> Piece {
+  static func randomPiece(forPlayer player: Player, horizontalSize: Int, verticalSize: Int) -> GamePiece {
     let validMoves: [GridCoordinate] = [
       GridCoordinate(column: 0, row: Int.random(in: 1...3)),
     ]
     let emoji = Character(UnicodeScalar(Array(0x1F300...0x1F3F0).randomElement()!)!)
-    return Piece(icon: emoji, player: player, validMoves: validMoves)
+    return GamePiece(icon: emoji, player: player, validMoves: validMoves)
   }
   
   private static func move() -> GridCoordinate {
