@@ -9,7 +9,7 @@ import Foundation
 
 // TODO: "Facade" this with a protocol so data can be mocked.
 
-class LobbyInteractor {
+@Observable class LobbyInteractor {
   let lobbyState: LobbyState
   let lobbyRepository = LobbyRepository()
   

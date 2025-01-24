@@ -9,10 +9,10 @@ import SwiftUI
 
 struct HostingView: View {
   @Environment(\.dismiss) var dismiss
+  @Environment(LobbyInteractor.self) private var lobbyInteractor
+
   let gameService: GameService
-  
-  let lobbyInteractor: LobbyInteractor
-  
+
   var body: some View {
     VStack {
       Text("Hosting")
@@ -36,6 +36,7 @@ struct HostingView: View {
 
 #Preview {
   let appState = AppState()
-  return HostingView(gameService: GameService(gameId: "a", hostId: "v", clientId: "g"), 
-                     lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
+  let lobbyInteractor = LobbyInteractor(lobbyState: appState.lobbyState)
+  HostingView(gameService: GameService(gameId: "a", hostId: "v", clientId: "g"))
+    .environment(lobbyInteractor)
 }

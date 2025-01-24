@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ClientView: View {
   @Environment(\.dismiss) var dismiss
-  @Environment(AppState.self) private var appState
-  
-  let lobbyInteractor: LobbyInteractor
-  
+  @Environment(AppState.self) private var appState  
+  @Environment(LobbyInteractor.self) private var lobbyInteractor
+
   var body: some View {
     VStack {
       Text("Client")
@@ -32,6 +31,8 @@ struct ClientView: View {
 
 #Preview {
   let appState = AppState()
-  return ClientView(lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
+  let lobbyInteractor = LobbyInteractor(lobbyState: appState.lobbyState)
+  return ClientView()
     .environment(appState)
+    .environment(lobbyInteractor)
 }

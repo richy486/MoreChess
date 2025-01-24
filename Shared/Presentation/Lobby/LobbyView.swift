@@ -10,8 +10,7 @@ import SwiftUI
 struct LobbyView: View {
   
   @Environment(AppState.self) private var appState
-  let lobbyInteractor: LobbyInteractor
-  
+  @Environment(LobbyInteractor.self) private var lobbyInteractor
   @Environment(\.dismiss) var dismiss
   
   var body: some View {
@@ -21,9 +20,9 @@ struct LobbyView: View {
         .navigationDestination(for: LobbyState.LobbyPages.self) { destination in
           switch destination {
           case .host(let gameService):
-            HostingView(gameService: gameService, lobbyInteractor: lobbyInteractor)
+            HostingView(gameService: gameService)
           case .client:
-            ClientView(lobbyInteractor: lobbyInteractor)
+            ClientView()
           }
         }
     }
@@ -62,6 +61,8 @@ struct LobbyView: View {
 
 #Preview {
   let appState = AppState()
-  return LobbyView(lobbyInteractor: LobbyInteractor(lobbyState: appState.lobbyState))
+  let lobbyInteractor = LobbyInteractor(lobbyState: appState.lobbyState)
+  return LobbyView()
     .environment(appState)
+    .environment(lobbyInteractor)
 }
