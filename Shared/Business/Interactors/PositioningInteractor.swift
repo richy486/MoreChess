@@ -73,16 +73,21 @@ import Foundation
       if appState.gameState.playCondition == .playing 
           && appState.gameState.currentTurn.local == false {
         Task {
-          appState.gameState.board = await gameRepository
+          let fetchedBoard = await gameRepository
             .fetchBoard(currentPlayer: appState.gameState.currentTurn,
                         opponent: appState.gameState.currentOpponent,
                         currentBoard: appState.gameState.board,
                         columnCount: appState.gameState.columnCount,
                         rowCount: appState.gameState.rowCount)
-          // Switch back
-          appState.gameState.currentTurn = appState.gameState.currentOpponent
-          // Check for win state
-          checkWinState()
+
+          await MainActor.run {
+            appState.gameState.board = fetchedBoard
+            // Switch back
+            appState.gameState.currentTurn = appState.gameState.currentOpponent
+            // Check for win state
+            checkWinState()
+          }
+
         }
       }
     }
