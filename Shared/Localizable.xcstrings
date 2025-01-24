@@ -13,9 +13,6 @@
     "Back" : {
 
     },
-    "Button" : {
-
-    },
     "Client" : {
 
     },
@@ -50,9 +47,6 @@
     "Current turn: %@" : {
 
     },
-    "Disabled" : {
-
-    },
     "Game: %@" : {
 
     },
@@ -85,9 +79,6 @@
 
     },
     "Playing state: " : {
-
-    },
-    "Press Me" : {
 
     },
     "Row count: %lld, Column count: %lld" : {
@@ -133,9 +124,6 @@
 
     },
     "TODO: Add moves list" : {
-
-    },
-    "Very long text for a button" : {
 
     },
     "Waiting for other player to join" : {
