@@ -79,6 +79,16 @@ struct GameState {
       [nil, nil, nil, nil, nil],
       [nil, nil, nil, nil, nil],
       p(0, 🏰, 🐴, 🤴, 👸) + [r(0)],
+
+      // Chess:
+//      p(1, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰),
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      [nil, nil, nil, nil, nil, nil, nil, nil],
+//      p(0, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰)
     ]
 
     let allBoard = initialBoard.joined().compactMap { $0 }

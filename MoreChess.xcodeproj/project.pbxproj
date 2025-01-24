@@ -11,8 +11,8 @@
 		B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55A82BA61F6E00874F00 /* MovesView.swift */; };
 		B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55AB2BA6289800874F00 /* PieceView.swift */; };
 		B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F55AB2BA6289800874F00 /* PieceView.swift */; };
-		B94B61B02B461D3200C998F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* Piece.swift */; };
-		B94B61B12B461D3200C998F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* Piece.swift */; };
+		B94B61B02B461D3200C998F3 /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* GamePiece.swift */; };
+		B94B61B12B461D3200C998F3 /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61AF2B461D3200C998F3 /* GamePiece.swift */; };
 		B94B61B32B461DD200C998F3 /* GridCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridCoordinate.swift */; };
 		B94B61B42B461DD200C998F3 /* GridCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61B22B461DD200C998F3 /* GridCoordinate.swift */; };
 		B94B61F52B68F8D700C998F3 /* PieceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */; };
@@ -95,7 +95,7 @@
 /* Begin PBXFileReference section */
 		B90F55A82BA61F6E00874F00 /* MovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesView.swift; sourceTree = "<group>"; };
 		B90F55AB2BA6289800874F00 /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
-		B94B61AF2B461D3200C998F3 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		B94B61AF2B461D3200C998F3 /* GamePiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePiece.swift; sourceTree = "<group>"; };
 		B94B61B22B461DD200C998F3 /* GridCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCoordinate.swift; sourceTree = "<group>"; };
 		B94B61F42B68F8D700C998F3 /* PieceGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceGenerator.swift; sourceTree = "<group>"; };
 		B95CE50F2AD4CB5B00978591 /* MoreChessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreChessApp.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				B96004AF2D4451AE006E9FB9 /* PieceBase.swift */,
-				B94B61AF2B461D3200C998F3 /* Piece.swift */,
+				B94B61AF2B461D3200C998F3 /* GamePiece.swift */,
 				B9FAC91A2BAF0CA7002A20F7 /* BuiltInPieces.swift */,
 				B9FAC91E2BAF0D6A002A20F7 /* Player.swift */,
 				B9FAC9292BAF29DF002A20F7 /* Players.swift */,
@@ -591,7 +591,7 @@
 				B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */,
 				B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */,
 				B9FAC93D2BB058DB002A20F7 /* ServiceType.swift in Sources */,
-				B94B61B02B461D3200C998F3 /* Piece.swift in Sources */,
+				B94B61B02B461D3200C998F3 /* GamePiece.swift in Sources */,
 				B9FAC9302BB05325002A20F7 /* GameView.swift in Sources */,
 				B9FAC9492BB06C91002A20F7 /* SimpleNavigationBackButton.swift in Sources */,
 				B9FAC9222BAF1DCD002A20F7 /* GameRepository.swift in Sources */,
@@ -617,7 +617,7 @@
 				B95CE53A2AD4CB5E00978591 /* ContentView.swift in Sources */,
 				B95CE5382AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
 				B90F55AD2BA6289800874F00 /* PieceView.swift in Sources */,
-				B94B61B12B461D3200C998F3 /* Piece.swift in Sources */,
+				B94B61B12B461D3200C998F3 /* GamePiece.swift in Sources */,
 				B90F55AA2BA61F6E00874F00 /* MovesView.swift in Sources */,
 				B9FAC9612BB30D8F002A20F7 /* StyleConstants.swift in Sources */,
 				B9FAC95C2BB2FD0C002A20F7 /* Typography.swift in Sources */,

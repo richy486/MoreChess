@@ -81,7 +81,12 @@ struct BoardView: View {
       .clear
     }
     return ZStack {
-      Rectangle().fill((index % 2 == 0) ? Constants.oddBoardColor : Constants.evenBoardColor)
+
+      // Figure out the background color by checking if the row index is even, and flip that is the
+      // column index is even.
+      let rowIndexEven = rowIndex % 2 == 0
+      let showOddBoardColor = columnIndex % 2 == 0 ? !rowIndexEven : rowIndexEven
+      Rectangle().fill(showOddBoardColor ? Constants.oddBoardColor : Constants.evenBoardColor)
       Rectangle().strokeBorder(color, lineWidth: 2)
     }
     .zIndex(Double(isTarget ? ZIndex.target.rawValue : ZIndex.normal.rawValue))
