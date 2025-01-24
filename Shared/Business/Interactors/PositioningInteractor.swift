@@ -9,7 +9,7 @@ import Foundation
 
 // TODO: "Facade" this with a protocol so data can be mocked.
 
-class PositioningInteractor {
+@Observable class PositioningInteractor {
   let appState: AppState
   let gameRepository = GameRepository()
   
@@ -68,7 +68,7 @@ class PositioningInteractor {
       // Check for win state
       checkWinState()
             
-      // Fetch the next board
+      // Fetch the next board from computer player (non-local).
       // TODO: Make this work for two non-local players.
       if appState.gameState.playCondition == .playing 
           && appState.gameState.currentTurn.local == false {

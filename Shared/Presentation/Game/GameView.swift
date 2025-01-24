@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GameView: View {
   
-  @Environment(AppState.self) private var appState
-  
+  @Environment(AppState.self) private var appState  
+
   var body: some View {
     VStack {
       
@@ -18,8 +18,8 @@ struct GameView: View {
       
       Spacer()
       
-      BoardView(positioningInteractor: PositioningInteractor(appState: appState))
-      
+      BoardView()
+
       Spacer()
       
       // Debug

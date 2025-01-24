@@ -9,9 +9,8 @@ import SwiftUI
 
 struct BoardView: View {
   @Environment(AppState.self) private var appState
-  
-  let positioningInteractor: PositioningInteractor
-  
+  @Environment(PositioningInteractor.self) private var positioningInteractor
+
   private enum Constants {
     static let targetColor = Color.red
     static let oddBoardColor = Color.gray
@@ -91,6 +90,8 @@ struct BoardView: View {
 
 #Preview {
   let appState = AppState()
-  return BoardView(positioningInteractor: PositioningInteractor(appState: appState))
+  let positioningInteractor = PositioningInteractor(appState: appState)
+  return BoardView()
     .environment(appState)
+    .environment(positioningInteractor)
 }

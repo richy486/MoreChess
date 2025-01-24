@@ -9,8 +9,9 @@ import Foundation
 
 // TODO: "Facade" this with a protocol so data can be mocked.
 
-struct GameRepository {
-  func fetchBoard(currentPlayer: Player, 
+class GameRepository {
+  
+  func fetchBoard(currentPlayer: Player,
                   opponent: Player,
                   currentBoard board: Board,
                   columnCount: Int,
