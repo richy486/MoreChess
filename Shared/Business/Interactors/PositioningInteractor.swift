@@ -116,21 +116,28 @@ import Foundation
   }
   
   private func checkWinState() {
+    let originalPlayCondition = appState.gameState.playCondition
     let pieces = appState.gameState.board.flatMap { $0 }.compactMap { $0 }
-    
-//    let playerPieceCounts = pieces.reduce(into: [Player: Int]()) { result, piece in
-//      result[piece.player] = (result[piece.player] ?? 0) + 1
-//    }
-    
+
+    // TODO: Check for checkmate.
+
+    // No pieces left
     let uniquePlayers = Set(pieces.map { $0.player })
-    
     switch uniquePlayers.count {
     case 0:
+      // How could this happen?
       appState.gameState.playCondition = .tie
     case 1:
       appState.gameState.playCondition = .win(player: uniquePlayers.first!)
     default:
       break
+    }
+
+    // If Game over, and this is the first time in this game it happened.
+    if appState.gameState.playCondition != .playing && originalPlayCondition == .playing {
+      // Store the game in `historyState`
+      let gameHistory = appState.gameState.generateAGameHistory()
+      appState.historyState.history.append(gameHistory)
     }
   }
 }

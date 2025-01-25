@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO: Should this be a state? e.g. an Observable class? or a constant?
 struct LayoutState {
   let elementDiameter: CGFloat = 50
 }

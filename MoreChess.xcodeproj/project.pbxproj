@@ -29,6 +29,7 @@
 		B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95CE5112AD4CB5E00978591 /* Assets.xcassets */; };
 		B96004B02D4451AE006E9FB9 /* PieceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96004AF2D4451AE006E9FB9 /* PieceBase.swift */; };
 		B96004B62D458B49006E9FB9 /* BoardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96004B52D458B49006E9FB9 /* BoardFactory.swift */; };
+		B96EBB382D45944D00F42C70 /* HistoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96EBB372D45943800F42C70 /* HistoryState.swift */; };
 		B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A62BAEF11E00907C61 /* AppState.swift */; };
 		B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A82BAEF18A00907C61 /* GameState.swift */; };
 		B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */; };
@@ -113,6 +114,7 @@
 		B95CE5352AD4CB5E00978591 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		B96004AF2D4451AE006E9FB9 /* PieceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceBase.swift; sourceTree = "<group>"; };
 		B96004B52D458B49006E9FB9 /* BoardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFactory.swift; sourceTree = "<group>"; };
+		B96EBB372D45943800F42C70 /* HistoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryState.swift; sourceTree = "<group>"; };
 		B9ABF7A62BAEF11E00907C61 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9ABF7A82BAEF18A00907C61 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				B9ABF7A82BAEF18A00907C61 /* GameState.swift */,
 				B9FAC9102BAEF492002A20F7 /* PositioningState.swift */,
 				B9FAC9162BAEFFAC002A20F7 /* LayoutState.swift */,
+				B96EBB372D45943800F42C70 /* HistoryState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				B96004B62D458B49006E9FB9 /* BoardFactory.swift in Sources */,
 				B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */,
 				B9FAC9342BB053CC002A20F7 /* LobbyView.swift in Sources */,
+				B96EBB382D45944D00F42C70 /* HistoryState.swift in Sources */,
 				B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */,
 				B90F55AC2BA6289800874F00 /* PieceView.swift in Sources */,
 				B9FAC93D2BB058DB002A20F7 /* ServiceType.swift in Sources */,

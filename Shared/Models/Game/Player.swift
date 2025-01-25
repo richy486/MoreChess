@@ -7,7 +7,8 @@
 
 import SwiftUI // For `Color`.
 
-struct Player: Equatable, Hashable {
+struct Player: Equatable, Hashable, Identifiable {
+  let id: UUID = UUID()
   let name: String
   let color: Color
   let movingDown: Bool

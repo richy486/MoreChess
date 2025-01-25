@@ -36,7 +36,7 @@ struct GameView: View {
         Text("target:")
       }
       Text("Row count: \(appState.gameState.rowCount), Column count: \(appState.gameState.columnCount)")
-      
+      gameHistoryView()
     } // VStack
     .style()
   } // body
@@ -74,6 +74,12 @@ struct GameView: View {
       positioningInteractor.restartGame()
     }
     .buttonStyle(PrimaryButtonStyle())
+  }
+
+  func gameHistoryView() -> some View {
+    ForEach(appState.gameState.players, id: \.id) { player in
+      Text("\(player.name) wins \(appState.historyState.wins(for: player))")
+    }
   }
 }
 

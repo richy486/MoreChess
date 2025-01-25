@@ -9,17 +9,18 @@ import Foundation
 
 @Observable class GameState {
 
-  // MARK: Board
-  
   // This data structure is (row, column), most of the other code is (column, row) because that is
   // (x, y).
   var board: Board = [[]]
   private let initialBoard: Board
   private var currentTurnIndex: Int = 0
   var playCondition: PlayCondition = .playing
-
+  var players: [Player]
+  // TODO: Add move history to store late in a `GameHistory`.
+  // TODO: Add game start time to store late in a `GameHistory`.
 
   var rowCount: Int { return board.count }
+
   // calculate columns from minimum grid positions in the rows so there are no positions without an
   // array value.
   var columnCount: Int {
@@ -27,9 +28,6 @@ import Foundation
       return min(partialResult, row.count)
     })
   }
-  
-  // TODO: too much calculation and errors here, refactor
-  var players: [Player]
 
   var currentTurn: Player {
     get {
@@ -42,6 +40,7 @@ import Foundation
       currentTurnIndex = index
     }
   }
+
   var currentOpponent: Player {
     switch currentTurnIndex {
     case 0:
@@ -79,5 +78,9 @@ import Foundation
     currentTurnIndex = 0
     playCondition = .playing
     board = initialBoard
+  }
+
+  func generateAGameHistory() -> GameHistory {
+    GameHistory(board: board, playCondition: playCondition, players: players)
   }
 }
