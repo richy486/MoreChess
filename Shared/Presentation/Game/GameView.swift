@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GameView: View {
   
-  @Environment(AppState.self) private var appState  
+  @Environment(AppState.self) private var appState
+  @Environment(PositioningInteractor.self) private var positioningInteractor
 
   var body: some View {
     VStack {
@@ -55,15 +56,31 @@ struct GameView: View {
         }
       }
     case .win(let player):
-      Text("Player \(player.name) Won!")
+      VStack {
+        Text("Player \(player.name) Won!")
+        restartControl()
+      }
+
     case .tie:
-      Text("Tie!")
+      VStack {
+        Text("Tie!")
+        restartControl()
+      }
     }
+  }
+
+  func restartControl() -> some View {
+    Button("Restart") {
+      positioningInteractor.restartGame()
+    }
+    .buttonStyle(PrimaryButtonStyle())
   }
 }
 
 #Preview {
   let appState = AppState()
+  let positioningInteractor = PositioningInteractor(appState: appState)
   return GameView()
     .environment(appState)
+    .environment(positioningInteractor)
 }

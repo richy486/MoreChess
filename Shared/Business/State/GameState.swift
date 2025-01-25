@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct GameState {
-  
+@Observable class GameState {
+
   // MARK: Board
   
   // This data structure is (row, column), most of the other code is (column, row) because that is
   // (x, y).
   var board: Board = [[]]
   private let initialBoard: Board
+  private var currentTurnIndex: Int = 0
+  var playCondition: PlayCondition = .playing
+
+
   var rowCount: Int { return board.count }
   // calculate columns from minimum grid positions in the rows so there are no positions without an
   // array value.
@@ -24,14 +28,9 @@ struct GameState {
     })
   }
   
-  // MARK: Current Player
-  
   // TODO: too much calculation and errors here, refactor
-  var players: [Player] = [
-    Players.one(local: true),
-    Players.two(local: false)
-  ]
-  private var currentTurnIndex: Int
+  var players: [Player]
+
   var currentTurn: Player {
     get {
       return players[currentTurnIndex]
@@ -53,13 +52,13 @@ struct GameState {
       fatalError("currentTurnIndex out of range")
     }
   }
-  
-  var playCondition: PlayCondition
-  
-  init() {
-    currentTurnIndex = 0
-    playCondition = .playing
 
+  init() {
+    let players =  [
+      Players.one(local: true),
+      Players.two(local: false)
+    ]
+    self.players = players
     initialBoard = BoardFactory.fiveByFive.makeBoard(players: players)
 
     let allBoard = initialBoard.joined().compactMap { $0 }
@@ -72,7 +71,13 @@ struct GameState {
       print("\(piece.key) \(piece.value.description)")
     }
 
-    // pieceList = Array(uniquePieces.values)
+    setInitialGameState()
+  }
+
+  func setInitialGameState() {
+    print("setInitialGameState")
+    currentTurnIndex = 0
+    playCondition = .playing
     board = initialBoard
   }
 }

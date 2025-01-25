@@ -81,6 +81,9 @@
     "Playing state: " : {
 
     },
+    "Restart" : {
+
+    },
     "Row count: %lld, Column count: %lld" : {
       "localizations" : {
         "en" : {

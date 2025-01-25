@@ -96,7 +96,11 @@ import Foundation
     appState.positioningState.selectedGridPosition = nil
     appState.positioningState.targetGrid = nil
   }
-  
+
+  func restartGame() {
+    appState.gameState.setInitialGameState()
+  }
+
   // MARK: Private functions
   
   private func gridOffsetFrom(offset: CGSize) -> GridCoordinate {
