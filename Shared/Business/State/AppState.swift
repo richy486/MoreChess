@@ -11,6 +11,5 @@ import Foundation
   var lobbyState = LobbyState()
   var gameState = GameState()
   var positioningState = PositioningState()
-  var layoutState = LayoutState()
   var historyState = HistoryState()
 }

@@ -104,8 +104,8 @@ import Foundation
   // MARK: Private functions
   
   private func gridOffsetFrom(offset: CGSize) -> GridCoordinate {
-    let x = Int(floor((offset.width + appState.layoutState.elementDiameter/2) / appState.layoutState.elementDiameter)) * (isRTL ? -1 : 1)
-    let y = Int(floor((offset.height + appState.layoutState.elementDiameter/2) / appState.layoutState.elementDiameter))
+    let x = Int(floor((offset.width + PresentationConstants.Layout.elementDiameter/2) / PresentationConstants.Layout.elementDiameter)) * (isRTL ? -1 : 1)
+    let y = Int(floor((offset.height + PresentationConstants.Layout.elementDiameter/2) / PresentationConstants.Layout.elementDiameter))
     return GridCoordinate(column: x, row: y)
   }
   

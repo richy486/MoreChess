@@ -7,23 +7,10 @@
 
 import SwiftUI
 
-struct BoardView: View {
+struct BoardView: View, BoardViewProtocol {
   @Environment(AppState.self) private var appState
   @Environment(PositioningInteractor.self) private var positioningInteractor
 
-  private enum Constants {
-    static let targetColor = Color.red
-    static let oddBoardColor = Color.gray
-    static let evenBoardColor = Color.white
-    static let boardOutline = Color.gray
-  }
-  
-  private enum ZIndex: Int {
-    case normal = 0
-    case target = 1
-    case selected = 2
-  }
-  
   var body: some View {
     Grid(horizontalSpacing: 0, verticalSpacing: 0) {
       ForEach(Array(appState.gameState.board.enumerated()), id: \.offset) { rowIndex, row in
@@ -39,9 +26,9 @@ struct BoardView: View {
                 let offset = appState.positioningState.pieceOffset(gridPosition)
                 PieceView(piece: piece)
                   .accessibility(label: Text("\(piece.description) piece"))
-                  .frame(width: appState.layoutState.elementDiameter,
-                         height: appState.layoutState.elementDiameter)
-                  .background(isTarget ? Constants.targetColor : piece.player.color)
+                  .frame(width: PresentationConstants.Layout.elementDiameter,
+                         height: PresentationConstants.Layout.elementDiameter)
+                  .background(isTarget ? PresentationConstants.GameColor.targetColor : piece.player.color)
                   .offset(x: offset.width * (isRTL ? -1 : 1), y: offset.height)
                   .gesture(
                     DragGesture()
@@ -54,11 +41,13 @@ struct BoardView: View {
                         positioningInteractor.endDrag()
                       }
                   )
-                  .zIndex(Double(isSelected ? ZIndex.selected.rawValue : ZIndex.normal.rawValue))
+                  .zIndex(Double(isSelected
+                                 ? PresentationConstants.ZIndex.selected.rawValue
+                                 : PresentationConstants.ZIndex.normal.rawValue))
               } else {
                 Color.clear
-                  .frame(width: appState.layoutState.elementDiameter,
-                         height: appState.layoutState.elementDiameter)
+                  .frame(width: PresentationConstants.Layout.elementDiameter,
+                         height: PresentationConstants.Layout.elementDiameter)
               }
             } // Group
             .background(background(isTarget: isTarget, 
@@ -69,28 +58,8 @@ struct BoardView: View {
         }
       }
     } // Grid
-    .border(Constants.boardOutline, width: 1)
+    .border(PresentationConstants.GameColor.boardOutline, width: 1)
   } // body
-  
-  func background(isTarget: Bool, rowIndex: Int, columnIndex: Int, rowCount: Int) -> some View {
-    let index = rowIndex * rowCount + columnIndex
-    let color: Color = switch (isTarget, (index % 2 == 0)) {
-    case (true, _):
-      Constants.targetColor
-    default:
-      .clear
-    }
-    return ZStack {
-
-      // Figure out the background color by checking if the row index is even, and flip that is the
-      // column index is even.
-      let rowIndexEven = rowIndex % 2 == 0
-      let showOddBoardColor = columnIndex % 2 == 0 ? !rowIndexEven : rowIndexEven
-      Rectangle().fill(showOddBoardColor ? Constants.oddBoardColor : Constants.evenBoardColor)
-      Rectangle().strokeBorder(color, lineWidth: 2)
-    }
-    .zIndex(Double(isTarget ? ZIndex.target.rawValue : ZIndex.normal.rawValue))
-  }
 }
 
 #Preview {

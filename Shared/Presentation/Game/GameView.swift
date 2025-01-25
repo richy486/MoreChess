@@ -12,11 +12,22 @@ struct GameView: View {
   @Environment(AppState.self) private var appState
   @Environment(PositioningInteractor.self) private var positioningInteractor
 
+  @State var showInfoView: Bool = false
   var body: some View {
     VStack {
-      
-      playConditionView()
-        .frame(maxHeight: .infinity, alignment: .top)
+
+      HStack(alignment: .top) {
+        playConditionView()
+          .frame(maxWidth: .infinity, alignment: .leading)
+        Button {
+          showInfoView.toggle()
+        } label: {
+          Image(systemName: "info")
+        }
+        .frame(maxWidth: .infinity, alignment: .trailing)
+      }
+      .padding(.horizontal)
+      .frame(maxHeight: .infinity, alignment: .top)
 
       BoardView()
         .frame(maxHeight: .infinity, alignment: .center)
@@ -28,12 +39,16 @@ struct GameView: View {
       .frame(maxHeight: .infinity, alignment: .bottom)
     } // VStack
     .style()
+    .sheet(isPresented: $showInfoView) {
+      InfoView()
+        .environment(appState)
+    }
   } // body
   
   @ViewBuilder func playConditionView() -> some View {
     switch appState.gameState.playCondition {
     case .playing:
-      VStack {
+        VStack(alignment: .leading) {
         Text("Current turn: \(appState.gameState.currentTurn.name)")
         HStack {
           Text("Playing state: ")

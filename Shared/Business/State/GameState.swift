@@ -52,6 +52,15 @@ import Foundation
     }
   }
 
+  var uniquePieces: [Character: GamePiece] {
+    let allBoard = initialBoard.joined().compactMap { $0 }
+    var uniquePieces: [Character: GamePiece] = [:]
+    for piece in allBoard {
+      uniquePieces[piece.pieceBase.icon] = piece
+    }
+    return uniquePieces
+  }
+
   init() {
     let players =  [
       Players.one(local: true),
@@ -60,12 +69,6 @@ import Foundation
     self.players = players
     initialBoard = BoardFactory.fiveByFive.makeBoard(players: players)
 
-    let allBoard = initialBoard.joined().compactMap { $0 }
-    var uniquePieces: [Character: GamePiece] = [:]
-    for piece in allBoard {
-      uniquePieces[piece.pieceBase.icon] = piece
-    }
-    
     for piece in uniquePieces {
       print("\(piece.key) \(piece.value.description)")
     }
