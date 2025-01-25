@@ -28,6 +28,7 @@
 		B95CE53B2AD4CB5E00978591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95CE5112AD4CB5E00978591 /* Assets.xcassets */; };
 		B95CE53C2AD4CB5E00978591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95CE5112AD4CB5E00978591 /* Assets.xcassets */; };
 		B96004B02D4451AE006E9FB9 /* PieceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96004AF2D4451AE006E9FB9 /* PieceBase.swift */; };
+		B96004B62D458B49006E9FB9 /* BoardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96004B52D458B49006E9FB9 /* BoardFactory.swift */; };
 		B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A62BAEF11E00907C61 /* AppState.swift */; };
 		B9ABF7A92BAEF18A00907C61 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7A82BAEF18A00907C61 /* GameState.swift */; };
 		B9ABF7AB2BAEF1EB00907C61 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */; };
@@ -111,6 +112,7 @@
 		B95CE5332AD4CB5E00978591 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		B95CE5352AD4CB5E00978591 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		B96004AF2D4451AE006E9FB9 /* PieceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceBase.swift; sourceTree = "<group>"; };
+		B96004B52D458B49006E9FB9 /* BoardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardFactory.swift; sourceTree = "<group>"; };
 		B9ABF7A62BAEF11E00907C61 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B9ABF7A82BAEF18A00907C61 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B9ABF7AA2BAEF1EB00907C61 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 		B9FAC93B2BB058C2002A20F7 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				B96004B52D458B49006E9FB9 /* BoardFactory.swift */,
 				B96004AF2D4451AE006E9FB9 /* PieceBase.swift */,
 				B94B61AF2B461D3200C998F3 /* GamePiece.swift */,
 				B9FAC91A2BAF0CA7002A20F7 /* BuiltInPieces.swift */,
@@ -586,6 +589,7 @@
 				B9FAC92C2BAF3102002A20F7 /* MoveValidator.swift in Sources */,
 				B96004B02D4451AE006E9FB9 /* PieceBase.swift in Sources */,
 				B95CE5372AD4CB5E00978591 /* MoreChessApp.swift in Sources */,
+				B96004B62D458B49006E9FB9 /* BoardFactory.swift in Sources */,
 				B9ABF7A72BAEF11E00907C61 /* AppState.swift in Sources */,
 				B9FAC9342BB053CC002A20F7 /* LobbyView.swift in Sources */,
 				B9FAC9452BB06BD4002A20F7 /* HostingView.swift in Sources */,

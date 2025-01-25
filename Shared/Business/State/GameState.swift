@@ -14,6 +14,7 @@ struct GameState {
   // This data structure is (row, column), most of the other code is (column, row) because that is
   // (x, y).
   var board: Board = [[]]
+  private let initialBoard: Board
   var rowCount: Int { return board.count }
   // calculate columns from minimum grid positions in the rows so there are no positions without an
   // array value.
@@ -59,37 +60,7 @@ struct GameState {
     currentTurnIndex = 0
     playCondition = .playing
 
-    let horizontalSize = 5
-    let verticalSize = 5
-
-    // Helper piece generator functions.
-    func r(_ playerIndex: Int) -> GamePiece {
-      PieceGenerator.randomPiece(forPlayer: players[playerIndex],
-                                 horizontalSize: horizontalSize,
-                                 verticalSize: verticalSize)
-    }
-    func p(_ playerIndex: Int, _ pieceBases: PieceBase...) -> [GamePiece] {
-      pieceBases.map { GamePiece(pieceBase: $0, player: players[playerIndex]) }
-    }
-
-    // Init board
-    let initialBoard: Board = [
-      [r(1), r(1), r(1), r(1), r(1)],
-      [nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil],
-      p(0, 🏰, 🐴, 🤴, 👸) + [r(0)],
-
-      // Chess:
-//      p(1, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰),
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      [nil, nil, nil, nil, nil, nil, nil, nil],
-//      p(0, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰)
-    ]
+    initialBoard = BoardFactory.fiveByFive.makeBoard(players: players)
 
     let allBoard = initialBoard.joined().compactMap { $0 }
     var uniquePieces: [Character: GamePiece] = [:]
