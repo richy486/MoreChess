@@ -25,7 +25,9 @@ struct HostingView: View {
       }
     }
     .navigationTitle("Host")    
+#if os(iOS)
     .navigationBarTitleDisplayMode(.inline)
+#endif
     .simpleNavigationBackButton(dismiss: dismiss)
     .style()
     .onAppear {

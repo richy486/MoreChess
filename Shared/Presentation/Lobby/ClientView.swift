@@ -22,7 +22,9 @@ struct ClientView: View {
       }
     }
     .navigationTitle("Join")
+#if os(iOS)
     .navigationBarTitleDisplayMode(.inline)
+#endif
     .simpleNavigationBackButton(dismiss: dismiss)
     .style()
     .onAppear(perform: lobbyInteractor.fetchAvailableGames)

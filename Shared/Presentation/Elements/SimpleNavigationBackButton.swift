@@ -11,6 +11,7 @@ extension View {
   func simpleNavigationBackButton(dismiss: DismissAction) -> some View {
     self
       .navigationBarBackButtonHidden(true)
+#if os(iOS)
       .toolbar {
         ToolbarItem(placement: .topBarLeading) {
           Button(action: {
@@ -21,5 +22,6 @@ extension View {
           }
         }
       }
+#endif
   }
 }

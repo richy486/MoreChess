@@ -48,7 +48,9 @@ struct LobbyView: View {
     }
     .style()
     .navigationTitle("More Chess 🐴")
+#if os(iOS)
     .navigationBarTitleDisplayMode(.inline)
+#endif
   }
   
   private func pathBinding() -> Binding<[LobbyState.LobbyPages]> {

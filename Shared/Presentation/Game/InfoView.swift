@@ -14,7 +14,7 @@ struct InfoView: View {
       VStack {
         let sorted = appState.gameState.uniquePieces.sorted { $0.key > $1.key }
         ForEach(sorted, id: \.key) { key, piece in
-          Text(String(piece.pieceBase.icon))          
+          Text(String(piece.pieceBase.icon))
           moves(validMoves: piece.pieceBase.validMoves)
         }
       }
