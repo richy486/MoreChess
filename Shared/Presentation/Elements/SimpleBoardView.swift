@@ -12,20 +12,25 @@ import SwiftUI
 
 /// Like `BoardView` but with no interaction, just to display something.
 struct SimpleBoardView: View, BoardViewProtocol {
-  let board: Board
+  let board: Board2<GamePiece?>
+
+  init(board: Board2<GamePiece?>) {
+    self.board = board
+  }
+
   var body: some View {
     Grid(horizontalSpacing: 0, verticalSpacing: 0) {
-      ForEach(Array(board.enumerated()), id: \.offset) { rowIndex, row in
+      ForEach(0...(board.rows-1), id: \.self) { y in
         GridRow {
-          ForEach(Array(row.enumerated()), id:\.offset) { columnIndex, piece in
+          ForEach(0...(board.columns-1), id: \.self) { x in
             Color.clear
               .frame(width: PresentationConstants.Layout.elementDiameter,
                      height: PresentationConstants.Layout.elementDiameter)
               .background(
                 background(isTarget: false,
-                           rowIndex: rowIndex,
-                           columnIndex: columnIndex,
-                           rowCount: board.count)
+                           rowIndex: y,
+                           columnIndex: x,
+                           rowCount: board.rows)
               )
           }
         }

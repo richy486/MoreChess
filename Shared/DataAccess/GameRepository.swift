@@ -13,33 +13,28 @@ class GameRepository {
   
   func fetchBoard(currentPlayer: Player,
                   opponent: Player,
-                  currentBoard board: Board,
+                  currentBoard board: Board2<GamePiece?>,
                   columnCount: Int,
-                  rowCount: Int) async -> Board {
+                  rowCount: Int) async -> Board2<GamePiece?> {
     // Debug sleep
-    try? await Task.sleep(nanoseconds: UInt64(2 * Double(NSEC_PER_SEC)))
+//    try? await Task.sleep(nanoseconds: UInt64(2 * Double(NSEC_PER_SEC)))
     
     // Get all current piece positions
-    let allPositions: [GridCoordinate] = board.enumerated().reduce([], { partialResult, value in
-      let rowIndex = value.offset
-      let row = value.element
-      let rowPositions: [GridCoordinate] = Array(row.enumerated()).compactMap { (columnIndex, piece) in
-        guard let piece else {
-          return nil
-        }
-        guard piece.player == currentPlayer else {
-          return nil
-        }
-        return GridCoordinate(column: columnIndex, row: rowIndex)
+    let allPositions: [GridCoordinate] = board.reduce([], { partialResult, value in
+      guard let piece = value.2 else {
+        return partialResult
       }
-      return partialResult + rowPositions
+      guard piece.player == currentPlayer else {
+        return partialResult
+      }
+      return partialResult + [GridCoordinate(column: value.0, row: value.1)]
     })
-    
+
     // Get a random piece
     guard let randomPiecePosition = allPositions.randomElement() else {
       fatalError("Can't get random piece positions")
     }
-    guard let piece = board[randomPiecePosition.row][randomPiecePosition.column] else {
+    guard let piece = board[randomPiecePosition.column, randomPiecePosition.row] else {
       fatalError("Can't get random piece")
     }
     
@@ -83,9 +78,9 @@ class GameRepository {
     
     // Update board
     var updatedBoard = board
-    updatedBoard[targetPosition.row][targetPosition.column] = piece
-    updatedBoard[randomPiecePosition.row][randomPiecePosition.column] = nil
-        
+    updatedBoard[targetPosition.column, targetPosition.row] = piece
+    updatedBoard[randomPiecePosition.column, randomPiecePosition.row] = nil
+
     return updatedBoard
   }
 }

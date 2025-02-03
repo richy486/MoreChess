@@ -3,7 +3,7 @@ enum BoardFactory {
   case fiveByFive
   case chess
 
-  func makeBoard(players: [Player]) -> Board {
+  func makeBoard(players: [Player]) -> Board2<GamePiece?> {
 
     var horizontalSize: Int = 0
     var verticalSize: Int = 0
@@ -22,18 +22,18 @@ enum BoardFactory {
       case .fiveByFive:
         horizontalSize = 5
         verticalSize = 5
-        return [
+        return try! Board2<GamePiece?>(nestedArray:  [
           [r(1), r(1), r(1), r(1), r(1)],
           [nil, nil, nil, nil, nil],
           [nil, nil, nil, nil, nil],
           [nil, nil, nil, nil, nil],
           p(0, 🏰, 🐴, 🤴, 👸) + [r(0)],
-        ]
+        ])
 
       case .chess:
         horizontalSize = 8
         verticalSize = 8
-        return [
+        return try! Board2<GamePiece?>(nestedArray:  [
           p(1, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰),
           [nil, nil, nil, nil, nil, nil, nil, nil],
           [nil, nil, nil, nil, nil, nil, nil, nil],
@@ -42,7 +42,7 @@ enum BoardFactory {
           [nil, nil, nil, nil, nil, nil, nil, nil],
           [nil, nil, nil, nil, nil, nil, nil, nil],
           p(0, 🏰, 🐴, 🥷, 👸, 🤴, 🥷, 🐴, 🏰)
-        ]
+        ])
     }
   }
 }

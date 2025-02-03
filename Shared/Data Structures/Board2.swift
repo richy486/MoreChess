@@ -1,5 +1,5 @@
 //
-//  Matrix.swift
+//  Board2.swift
 //  MoreChess
 //
 //  Created by Richard Adem on 26/01/2025.
@@ -20,7 +20,11 @@ struct Board2<T> {
   let rows: Int
   var grid: [T]
 
-
+  init() {
+    self.columns = 0
+    self.rows = 0
+    self.grid = []
+  }
 
   init(columns: Int, rows: Int, defaultValue: T) {
     self.columns = columns

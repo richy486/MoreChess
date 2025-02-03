@@ -53,7 +53,7 @@ struct InfoView: View {
     if width <= 0 && height <= 0 {
       Text("can make board with \(width) x \(height)")
     } else {
-      let board: Board = Array(repeating: Array(repeating: nil, count: width), count: height)
+      let board = Board2<GamePiece?>(columns: width, rows: height, defaultValue: nil)
 
       VStack {
         Text("\(minColumn) x \(maxColumn) -> \(width)")

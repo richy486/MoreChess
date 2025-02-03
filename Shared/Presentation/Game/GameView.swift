@@ -90,7 +90,7 @@ struct GameView: View {
     VStack {
       // Debug
       Text("offset: \(appState.positioningState.dragOffset.width) \(appState.positioningState.dragOffset.height)")
-      if let selectedGridPosition = appState.positioningState.selectedGridPosition, let piece = appState.gameState.board[selectedGridPosition.row][selectedGridPosition.column] {
+      if let selectedGridPosition = appState.positioningState.selectedGridPosition, let piece = appState.gameState.board[selectedGridPosition.column, selectedGridPosition.row] {
         Text("selected: col: \(selectedGridPosition.column) row: \(selectedGridPosition.row) \(piece.pieceBase.icon)")
       } else {
         Text("selected:")

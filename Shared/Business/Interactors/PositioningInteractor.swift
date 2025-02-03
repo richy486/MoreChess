@@ -30,7 +30,7 @@ import Foundation
     }
     
     // Is there a piece at this grid position?
-    guard let piece = appState.gameState.board[fromGridPosition.row][fromGridPosition.column] else {
+    guard let piece = appState.gameState.board[fromGridPosition.column, fromGridPosition.row] else {
       return
     }
     // Is this the right player's piece?
@@ -110,14 +110,14 @@ import Foundation
   }
   
   private func movePiece(from: GridCoordinate, to: GridCoordinate) {
-    let piece = appState.gameState.board[from.row][from.column]
-    appState.gameState.board[to.row][to.column] = piece
-    appState.gameState.board[from.row][from.column] = nil
+    let piece = appState.gameState.board[from.column, from.row]
+    appState.gameState.board[to.column, to.row] = piece
+    appState.gameState.board[from.column, from.row] = nil
   }
   
   private func checkWinState() {
     let originalPlayCondition = appState.gameState.playCondition
-    let pieces = appState.gameState.board.flatMap { $0 }.compactMap { $0 }
+    let pieces = appState.gameState.board.grid.compactMap { $0 }
 
     // TODO: Check for checkmate.
 

@@ -20,11 +20,11 @@ struct MoveValidator {
   /// - Returns: A `GridCoordinate` of a valid move if valid, nil is invalid.
   static func validTargetPosition(startingCoordinate: GridCoordinate?, 
                                   toGridOffset gridOffset: GridCoordinate,
-                                  board: Board,
+                                  board: Board2<GamePiece?>,
                                   columnCount: Int,
                                   rowCount: Int) -> GridCoordinate? {
     guard let startingCoordinate, 
-            let currentPlayerPiece = board[startingCoordinate.row][startingCoordinate.column] else {
+          let currentPlayerPiece = board[startingCoordinate.column, startingCoordinate.row] else {
       return nil
     }
     
@@ -66,7 +66,7 @@ struct MoveValidator {
     }
     
     // If there is a piece in the target position, it has to be the opponent.
-    if let targetPiece = board[targetPosition.row][targetPosition.column] {
+    if let targetPiece = board[targetPosition.column, targetPosition.row] {
       guard targetPiece.player != currentPlayerPiece.player else {
         return nil
       }

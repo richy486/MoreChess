@@ -28,7 +28,7 @@ struct LobbyRepository {
     ]
   }
   func opponentJoined(gameId: String) async -> Bool {
-    try? await Task.sleep(nanoseconds: UInt64(1 * Double(NSEC_PER_SEC)))
+//    try? await Task.sleep(nanoseconds: UInt64(1 * Double(NSEC_PER_SEC)))
     
     // DEBUG
     LobbyRepository.checks += 1

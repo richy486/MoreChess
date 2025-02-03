@@ -11,23 +11,17 @@ import Foundation
 
   // This data structure is (row, column), most of the other code is (column, row) because that is
   // (x, y).
-  var board: Board = [[]]
-  private let initialBoard: Board
+  var board: Board2<GamePiece?>
+  private let initialBoard: Board2<GamePiece?>
   private var currentTurnIndex: Int = 0
   var playCondition: PlayCondition = .playing
   var players: [Player]
   // TODO: Add move history to store late in a `GameHistory`.
   // TODO: Add game start time to store late in a `GameHistory`.
 
-  var rowCount: Int { return board.count }
-
-  // calculate columns from minimum grid positions in the rows so there are no positions without an
-  // array value.
-  var columnCount: Int {
-    return board.reduce(999, { partialResult, row in
-      return min(partialResult, row.count)
-    })
-  }
+  // Probably can call the board values directly.
+  var rowCount: Int { board.rows }
+  var columnCount: Int { board.columns }
 
   var currentTurn: Player {
     get {
@@ -53,7 +47,7 @@ import Foundation
   }
 
   var uniquePieces: [Character: GamePiece] {
-    let allBoard = initialBoard.joined().compactMap { $0 }
+    let allBoard = initialBoard.grid.compactMap { $0 }
     var uniquePieces: [Character: GamePiece] = [:]
     for piece in allBoard {
       uniquePieces[piece.pieceBase.icon] = piece
@@ -68,6 +62,7 @@ import Foundation
     ]
     self.players = players
     initialBoard = BoardFactory.fiveByFive.makeBoard(players: players)
+    board = initialBoard
 
     for piece in uniquePieces {
       print("\(piece.key) \(piece.value.description)")

@@ -13,17 +13,18 @@ struct BoardView: View, BoardViewProtocol {
 
   var body: some View {
     Grid(horizontalSpacing: 0, verticalSpacing: 0) {
-      ForEach(Array(appState.gameState.board.enumerated()), id: \.offset) { rowIndex, row in
+      ForEach(0...(appState.gameState.board.rows-1), id: \.self) { y in
         GridRow {
-          ForEach(Array(row.enumerated()), id:\.offset) { columnIndex, piece in
-            let isTarget = appState.positioningState.targetGrid?.column == columnIndex
-              && appState.positioningState.targetGrid?.row == rowIndex
-            let gridPosition = GridCoordinate(column: columnIndex, row: rowIndex)
-            let isSelected = appState.positioningState.selectedGridPosition?.column == columnIndex
-              && appState.positioningState.selectedGridPosition?.row == rowIndex
+          ForEach(0...(appState.gameState.board.columns-1), id: \.self) { x in
+            let piece = appState.gameState.board[x, y]
+            let isTarget = appState.positioningState.targetGrid?.column == x
+                           && appState.positioningState.targetGrid?.row == y
+            let gridPosition = GridCoordinate(column: x, row: y)
+            let isSelected = appState.positioningState.selectedGridPosition?.column == x
+                             && appState.positioningState.selectedGridPosition?.row == y
+            let offset = appState.positioningState.pieceOffset(gridPosition)
             Group {
               if let piece {
-                let offset = appState.positioningState.pieceOffset(gridPosition)
                 PieceView(piece: piece)
                   .accessibility(label: Text("\(piece.description) piece"))
                   .frame(width: PresentationConstants.Layout.elementDiameter,
@@ -35,7 +36,7 @@ struct BoardView: View, BoardViewProtocol {
                       .onChanged { gesture in
                         positioningInteractor
                           .update(dragOffset: gesture.translation,
-                                  from: GridCoordinate(column: columnIndex, row: rowIndex))
+                                  from: GridCoordinate(column: x, row: y))
                       }
                       .onEnded { _ in
                         positioningInteractor.endDrag()
@@ -44,6 +45,7 @@ struct BoardView: View, BoardViewProtocol {
                   .zIndex(Double(isSelected
                                  ? PresentationConstants.ZIndex.selected.rawValue
                                  : PresentationConstants.ZIndex.normal.rawValue))
+
               } else {
                 Color.clear
                   .frame(width: PresentationConstants.Layout.elementDiameter,
@@ -51,8 +53,8 @@ struct BoardView: View, BoardViewProtocol {
               }
             } // Group
             .background(background(isTarget: isTarget, 
-                                   rowIndex: rowIndex,
-                                   columnIndex: columnIndex,
+                                   rowIndex: y,
+                                   columnIndex: x,
                                    rowCount: appState.gameState.rowCount))
           }
         }

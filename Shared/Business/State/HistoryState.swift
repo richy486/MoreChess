@@ -25,7 +25,7 @@ import Foundation
 }
 
 struct GameHistory {
-  let board: Board
+  let board: Board2<GamePiece?>
   let playCondition: PlayCondition
   let players: [Player]
 
