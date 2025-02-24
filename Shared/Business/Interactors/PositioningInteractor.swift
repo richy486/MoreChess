@@ -11,8 +11,8 @@ import Foundation
 
 @Observable class PositioningInteractor {
   let appState: AppState
-  let gameRepository = GameRepository()
-  
+  let gameRepository: GameRepository = GameRepositoryRandom()
+
   init(appState: AppState) {
     self.appState = appState
   }

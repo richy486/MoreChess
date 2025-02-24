@@ -61,7 +61,7 @@ import Foundation
       Players.two(local: false)
     ]
     self.players = players
-    initialBoard = BoardFactory.fiveByFive.makeBoard(players: players)
+    initialBoard = BoardFactory.pawnGame.makeBoard(players: players)
     board = initialBoard
 
     for piece in uniquePieces {

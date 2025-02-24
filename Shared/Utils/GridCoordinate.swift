@@ -10,7 +10,18 @@ import Foundation
 struct GridCoordinate: Hashable {
   let column: Int
   let row: Int
-  
+
+  // true: must land on an opponent e.g. Pawn attack.
+  // false: must NOT land on an opponent e.g. Pawn forward.
+  // nil: opponent or empty square e.g. most other regular pieces.
+  let attacking: Bool?
+
+  init(column: Int, row: Int, attacking: Bool? = nil) {
+    self.column = column
+    self.row = row
+    self.attacking = attacking
+  }
+
   func draw() -> String {
     let maxSize = 10
     var result: [String] = []

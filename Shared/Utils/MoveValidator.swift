@@ -38,19 +38,19 @@ struct MoveValidator {
     }
     
     // Validate position
-    guard currentPlayerPiece.pieceBase.validMoves.first(where: { validMove in
+    let validMove = currentPlayerPiece.pieceBase.validMoves.first(where: { validMove in
       // Check for not `moveDown`.
       // TODO: Bug where 👉 piece is rotated when board is flipped.
       let validMoveRow = currentPlayerPiece.player.movingDown ? validMove.row : validMove.row * -1
-      let validMoveColumn = currentPlayerPiece.player.movingDown 
+      let validMoveColumn = currentPlayerPiece.player.movingDown
         ? validMove.column : validMove.column * -1
-      
+
       // If there are two `Int.max` their absolute values must be equal.
       if abs(validMoveRow) == Int.max && abs(validMoveColumn) == Int.max
           && abs(gridOffset.row) != abs(gridOffset.column) {
         return false
       }
-      
+
       // Is there a board position?
       guard (gridOffset.column == validMoveColumn
              || (gridOffset.column > 0 && validMoveColumn == Int.max)
@@ -61,17 +61,29 @@ struct MoveValidator {
         return false
       }
       return true
-    }) != nil else {
+    })
+
+    guard let validMove else {
       return nil
     }
-    
-    // If there is a piece in the target position, it has to be the opponent.
-    if let targetPiece = board[targetPosition.column, targetPosition.row] {
-      guard targetPiece.player != currentPlayerPiece.player else {
-        return nil
-      }
+
+    let targetPiece = board[targetPosition.column, targetPosition.row]
+
+    guard targetPiece?.player != currentPlayerPiece.player else {
+      // Can't be own piece on the target position
+      return nil
     }
 
-    return targetPosition
+    if let attacking = validMove.attacking {
+      if attacking {
+        // must land on an opponent, if not nil it has to be opponent because it's not own piece (above)
+        return targetPiece != nil ? targetPosition : nil
+      } else {
+        // must NOT land on an opponent
+        return targetPiece == nil ? targetPosition : nil
+      }
+    } else {
+      return targetPosition
+    }
   }
 }

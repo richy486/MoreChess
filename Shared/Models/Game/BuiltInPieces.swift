@@ -61,6 +61,13 @@ let 🥷 = PieceBase(icon: "🥷", validMoves: [
   GridCoordinate(column: Int.max, row: -Int.max),
   GridCoordinate(column: -Int.max, row: Int.max),
 ])
+// Pawn
+let 🐥 = PieceBase(icon: "🐥", validMoves: [
+  GridCoordinate(column: 0, row: 1, attacking: false),
+  GridCoordinate(column: 1, row: 1, attacking: true),
+  GridCoordinate(column: -1, row: 1, attacking: true)
+  // TODO: first move
+])
 let 📍 = PieceBase(icon: "📍", validMoves: [
   GridCoordinate(column: 1, row: 1),
   GridCoordinate(column: -1, row: 1)
